@@ -28,21 +28,33 @@
         <ul class="second-nav">
           <li>
             <a class="search" href="#">Поиск</a>
-            <section class="popup-search">
-              <input type="text" placeholder="Что ищем?">
-            </section>
+            <form class="popup-search" method="post" action="https://echo.htmlacademy.ru">
+              <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+              <input id="search-field" type="text" name="search" placeholder="Что ищем?">
+              <input class="visually-hidden" type="submit" value="Найти">
+            </form>
           </li>
           <li>
             <a class="login" href="#">Вход</a>
             <section class="popup-login">
-              <!-- Тут будет форма -->
+              <form method="post" action="https://echo.htmlacademy.ru">
+                <p>
+                  <label class="visually-hidden" for="user-login">Логин</label>
+                  <input class="login-user" id="user-login" type="email" name="login" placeholder="Электронная почта">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="user-password">Пароль</label>
+                  <input class="login-password" id="user-password" type="password" name="password" placeholder="Пароль">
+                </p>
+                <input class="button" type="submit" value="Войти">
+              </form>
               <div class="help">
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
               </div>
             </section>
           </li>
-          <li><a class="cart" href="#">Пусто</a></li>
+          <li><a class="cart" href="#" aria-label="Корзина">Пусто</a></li>
         </ul>
       </nav>
       <div class="main-tel">
@@ -127,7 +139,11 @@
       <section class="distribution">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <!-- Тут будет форма -->
+        <form class="popup-dist" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="dist-field">Подписка на рассылку</label>
+          <input id="dist-field" type="email" name="email" placeholder="Электронная почта">
+          <input class="button" type="submit" value="Отправить">
+        </form>
       </section>
       <div class="map">
         <section class="contacts">
@@ -145,11 +161,6 @@
           <a class="button" href="#">Форма обратной связи</a>
         </section>
       </div>
-      <section class="modal modal-feedback">
-        <b>Мы обязательно вам ответим!</b>
-        <span class="modal-close">x</span>
-        <!-- Тут будет форма -->
-      </section>
     </main>
     <footer class="main-footer">
       <ul class="footer-social">
@@ -171,5 +182,25 @@
         <p>Сделано в <span class="underline">HTML Academy</span> © 2017</p>
       </a>
     </footer>
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <b>Мы обязательно вам ответим!</b>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="feedback-name">Имя</label>
+          <input class="feedback-name" id="feedback-name" type="text" name="name" placeholder="Как вас зовут?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-email">Email</label>
+          <input class="feedback-email" id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-text">Вопросы</label>
+          <textarea class="feedback-text" id="feedback-text" type="text" name="text" placeholder="Напишите что-нибудь..."></textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
   </body>
 </html>
