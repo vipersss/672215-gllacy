@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -27,7 +30,7 @@
         </ul>
         <ul class="second-nav">
           <li>
-            <a class="search" href="#">Поиск</a>
+            <button class="nav-button search">Поиск</button>
             <form class="popup-search" method="post" action="https://echo.htmlacademy.ru">
               <label class="visually-hidden" for="search-field">Поиск по сайту</label>
               <input id="search-field" type="text" name="search" placeholder="Что ищем?">
@@ -35,7 +38,7 @@
             </form>
           </li>
           <li>
-            <a class="login" href="#">Вход</a>
+            <button class="nav-button login">Вход</button>
             <section class="popup-login">
               <form method="post" action="https://echo.htmlacademy.ru">
                 <p>
@@ -54,7 +57,7 @@
               </div>
             </section>
           </li>
-          <li><button class="cart" aria-label="Корзина">Пусто</button></li>
+          <li><button class="nav-button cart" aria-label="Корзина">Пусто</button></li>
         </ul>
       </nav>
       <div class="main-tel">
