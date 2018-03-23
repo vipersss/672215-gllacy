@@ -31,7 +31,7 @@
             <form class="popup-search" method="post" action="https://echo.htmlacademy.ru">
               <label class="visually-hidden" for="search-field">Поиск по сайту</label>
               <input id="search-field" type="text" name="search" placeholder="Что ищем?">
-              <input class="visually-hidden" type="submit" value="Найти">
+              <button class="visually-hidden" type="submit">Найти</button>
             </form>
           </li>
           <li>
@@ -46,7 +46,7 @@
                   <label class="visually-hidden" for="user-password">Пароль</label>
                   <input class="login-password" id="user-password" type="password" name="password" placeholder="Пароль">
                 </p>
-                <input class="button" type="submit" value="Войти">
+                <button class="button" type="submit">Войти</button>
               </form>
               <div class="help">
                 <a href="#">Забыли пароль?</a>
@@ -105,7 +105,8 @@
               <option value="fat">По жирности</option>
             /<select>
           </fieldset>
-          <fieldset> <!-- Надо подумать как сделать двойной range -->
+          <fieldset> <!-- двойной range через js. пока оставлю type="range" переделаю когда дойду до нужной лекции-->
+            <!-- input type=text 2 штуки для ввода данных. ползунки любые например div.-->
             <legend>Цена: <output name="costoutput">100</output> руб.</legend>
             <label class="visually-hidden" for="filter-input-cost">Цена</label>
             <input id="filter-input-cost" type="range" name="cost" min="0" max="800" step="100" value="100">
@@ -156,7 +157,7 @@
               </li>
             </ul>
           </fieldset>
-          <input class="button filter-button" type="submit" value="Применить">
+          <button class="button filter-button" type="submit">Применить</button>
         </form>
       </section>
       <section class="catalog">
