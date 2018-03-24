@@ -17,6 +17,17 @@ a {
   outline: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .main-nav ul {
   list-style: none;
 }
@@ -85,7 +96,6 @@ a {
   box-shadow: none;
 }
 
-/* .site-nav-active a, */
 .dropdown-item.active,
 .dropdown-item.active a{
   color: #ffffff;
@@ -99,7 +109,7 @@ a {
   font-weight: 500;
   text-align: right;
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255,255,255,0.2);
   border-width: 0px;
   border-radius: 16px;
   outline: none;
@@ -171,26 +181,26 @@ a {
 
 .link-black {
   color: #323232;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 
 .link-black:hover,
 .link-black:focus,
 .link-black:active {
   color: #e84d37;
-  border-bottom: 1px solid rgba(236, 89, 60, 0.3);
+  border-bottom: 1px solid rgba(236,89,60,0.3);
 }
 
 .link-white {
   color: #ffffff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 .link-white:hover,
 .link-white:focus,
 .link-white:active {
   color: #ffbc9e;
-  border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+  border-bottom: 1px solid rgba(249,172,159,0.3);
 }
 
 .login-help a{
@@ -210,4 +220,45 @@ a {
 .main-tel .tel{
   font-size: 22px;
   line-height: 24px;
+}
+
+.slider-item {
+  font-size: 60px;
+  line-height: 60px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.slider-item .button {
+  font-size: 32px;
+  line-height: 44px;
+  text-shadow: 0px 2px 5px rgba(159,31,10,0.76);
+  border-radius: 32px;
+}
+.sale-item .button {
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 23px;
+}
+
+.button {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0px 2px 2px rgba(171,16,0,0.64);
+  background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%);
+}
+
+.button:focus,
+.button:hover { /* Еще не дошел до лекции про сложные градиенты*/
+  box-shadow: 0px 2px 2px #ab1000;
+  /* background-color: rgba(255,255,255,0.2); */
+  /* background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%); */
+}
+
+.button:active { /* Еще не дошел до лекции про сложные градиенты*/
+  box-shadow: inset 0px 2px 2px #942617;
+  background-image: linear-gradient(0deg, #f16843 0%, #e74a35 100%);
+  /* background-color: rgba(0,0,0,0.07); */
 }
