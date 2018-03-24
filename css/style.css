@@ -39,6 +39,18 @@ a {
   border-radius: 16px;
 }
 
+.site-nav a:active {
+  box-shadow: inset 0px 2px 1px #696868;
+  background-color: #ededed;
+}
+
+.site-nav-active a{
+  color: #ffffff;
+  background-color: #cf6f57;
+  border: none;
+  border-radius: 16px;
+}
+
 .dropdown-menu {
   font-size: 14px;
   line-height: 16px;
@@ -48,15 +60,16 @@ a {
   background-color: #f7f7f3;
 }
 
-.dropdown-menu .dropdown-header,
-.dropdown-menu a {
-  width: 200px;
+.dropdown-header {
   color: #323232;
-  border: none;
+  font-weight: 700;
 }
 
-.dropdown-menu .dropdown-header {
-  font-weight: 700;
+.dropdown-item a {
+  color: #323232;
+  border: none;
+  border-radius: 0px;
+  background-color: inherit;
 }
 
 .dropdown-item:hover,
@@ -64,6 +77,19 @@ a {
 .dropdown-item a:focus {
   background-color: #fbddd7;
   border-radius: 0px;
+}
+
+.dropdown-item:active,
+.dropdown-item a:active {
+  background-color: #f6b4a4;
+  box-shadow: none;
+}
+
+/* .site-nav-active a, */
+.dropdown-item.active,
+.dropdown-item.active a{
+  color: #ffffff;
+  background-color: #cf6f57;
 }
 
 .nav-button {
@@ -121,12 +147,56 @@ a {
   color: #999999;
 }
 
-/*
+.popup input:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.popup-cart {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.popup-cart .opacity {
+  color: #999999;
+}
+
+.popup-cart .total-cost {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.link-black {
+  color: #323232;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.link-black:hover,
+.link-black:focus,
+.link-black:active {
+  color: #e84d37;
+  border-bottom: 1px solid rgba(236, 89, 60, 0.3);
+}
+
+.link-white {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.link-white:hover,
+.link-white:focus,
+.link-white:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+}
+
 .login-help a{
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
-  color: #323232;
 }
 
 .main-tel {
@@ -140,4 +210,4 @@ a {
 .main-tel .tel{
   font-size: 22px;
   line-height: 24px;
-} */
+}

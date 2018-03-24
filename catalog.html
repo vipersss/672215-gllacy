@@ -14,7 +14,7 @@
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глэйси»">
         </a>
         <ul class="site-nav">
-          <li class="active">
+          <li class="site-nav-active">
             <a href="#">Каталог</a>
             <ul class="dropdown-menu">
               <li class="dropdown-header">Новинки</li>
@@ -31,7 +31,7 @@
         <ul class="second-nav">
           <li>
             <button class="nav-button search">Поиск</button>
-            <form class="popup-search" method="post" action="https://echo.htmlacademy.ru">
+            <form class="popup popup-search" method="post" action="https://echo.htmlacademy.ru">
               <label class="visually-hidden" for="search-field">Поиск по сайту</label>
               <input id="search-field" type="text" name="search" placeholder="Что ищем?">
               <button class="button visually-hidden" type="submit">Найти</button>
@@ -39,7 +39,7 @@
           </li>
           <li>
             <button class="nav-button login">Вход</button>
-            <section class="popup-login">
+            <section class="popup popup-login">
               <form method="post" action="https://echo.htmlacademy.ru">
                 <p>
                   <label class="visually-hidden" for="user-login">Логин</label>
@@ -59,7 +59,7 @@
           </li>
           <li>
             <button class="nav-button cart" aria-label="Корзина">2 товара</button> <!-- из лекции по доступности тут должна быть кнопка. т.к. тут только попап. -->
-            <section class="popup-cart">
+            <section class="popup popup-cart">
               <table class="products">
                 <tr class="product-item">
                   <td class="close">x</td>
