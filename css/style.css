@@ -28,7 +28,14 @@ a {
   overflow: hidden;
 }
 
-.main-nav ul {
+.main-nav ul,
+.slider ul,
+.sale ul,
+.hit ul,
+.catalog ul,
+.features ul,
+.main-footer ul,
+.breadcrumbs {
   list-style: none;
 }
 
@@ -38,7 +45,8 @@ a {
   font-weight: 700;
 }
 
-.site-nav a {
+.site-nav a,
+.footer-academy .underline {
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
@@ -127,7 +135,10 @@ a {
   background-color: #f7f7f3;
 }
 
-.popup input {
+.popup input,
+.form-dist input,
+.modal-feedback input,
+.modal-feedback textarea {
   font: inherit;
   font-size: 16px;
   line-height: 24px;
@@ -139,25 +150,41 @@ a {
   outline: none;
 }
 
-.popup input:hover {
+.popup input:hover,
+.form-dist input:hover,
+.modal-feedback input:hover,
+.modal-feedback textarea:hover {
   border: 2px solid rgba(154,154,154,0.52);
 }
 
-.popup input:focus {
+.popup input:focus,
+.form-dist input:focus,
+.modal-feedback input:focus,
+.modal-feedback textarea:focus
+ {
   border: 2px solid rgba(46,136,228,0.52);
 }
 
-.popup input::-webkit-input-placeholder {
+.popup input::-webkit-input-placeholder,
+.form-dist input::-webkit-input-placeholder,
+.modal-feedback input::-webkit-input-placeholder,
+.modal-feedback textarea::-webkit-input-placeholder {
   font-weight: 400;
   color: #999999;
 }
 
-.popup input::-moz-placeholder {
+.popup input::-moz-placeholder,
+.form-dist input::-moz-placeholder,
+.modal-feedback input::-moz-placeholder,
+.modal-feedback textarea::-moz-placeholder {
   font-weight: 400;
   color: #999999;
 }
 
-.popup input:-ms-input-placeholder {
+.popup input:-ms-input-placeholder,
+.form-dist input:-ms-input-placeholder,
+.modal-feedback input:-ms-input-placeholder,
+.modal-feedback textarea:-ms-input-placeholder {
   font-weight: 400;
   color: #999999;
 }
@@ -230,13 +257,34 @@ a {
   text-align: center;
 }
 
+.slider-list .slider-item:nth-of-type(1) {
+  background: #839d8f url("../img/ice-cream-back-1-temp.png") no-repeat;
+}
+
+.slider-list .slider-item:nth-of-type(2) {
+  background: #8896a6 url("../img/ice-cream-back-2-temp.png") no-repeat;
+}
+
+.slider-list .slider-item:nth-of-type(3) {
+  background: #9d8b83 url("../img/ice-cream-back-3-temp.png") no-repeat;
+}
+
 .slider-item .button {
   font-size: 32px;
   line-height: 44px;
   text-shadow: 0px 2px 5px rgba(159,31,10,0.76);
   border-radius: 32px;
 }
-.sale-item .button {
+
+.popup-login .button,
+.popup-cart .button,
+.sale-item .button,
+.hit-item .button,
+.catalog-item .button,
+.popup-dist .button,
+.form-dist .button,
+.contacts .button,
+.modal-feedback .button {
   font-size: 18px;
   line-height: 24px;
   border-radius: 23px;
@@ -246,12 +294,14 @@ a {
   color: #ffffff;
   font-weight: 700;
   text-align: center;
+  border: 0px;
   box-shadow: 0px 2px 2px rgba(171,16,0,0.64);
   background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%);
 }
 
 .button:focus,
 .button:hover { /* Еще не дошел до лекции про сложные градиенты*/
+  outline: none;
   box-shadow: 0px 2px 2px #ab1000;
   /* background-color: rgba(255,255,255,0.2); */
   /* background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%); */
@@ -261,4 +311,195 @@ a {
   box-shadow: inset 0px 2px 2px #942617;
   background-image: linear-gradient(0deg, #f16843 0%, #e74a35 100%);
   /* background-color: rgba(0,0,0,0.07); */
+}
+
+.sale-list .sale-item:nth-of-type(1) {
+  background: #911b2d url("../img/raspberry.jpg") no-repeat;
+}
+
+.sale-list .sale-item:nth-of-type(2) {
+  background: #503225 url("../img/chocolate.jpg") no-repeat;
+}
+
+.sale-item,
+.features,
+.blog,
+.distribution,
+.contacts {
+  border-radius: 15px;
+}
+
+.distribution .background {
+  border-radius: 10px;
+}
+
+.sale-item h3 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.sale-item p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.hit-item h3,
+.catalog-item h3 {
+  text-align: center;
+}
+
+.hit-item p,
+.catalog-item p {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  text-shadow: 0.5px 0.866px 3px rgba(49,50,53,0.5);
+}
+
+.hit-item .sub,
+.catalog-item .sub {
+  font-size: 30px;
+}
+
+.hit-item img,
+.catalog-item img {
+  border-radius: 50%;
+}
+
+.features {
+  color: #323232;
+  background: #ecdfc4 url("../img/wafer.jpg") no-repeat;
+}
+.features p,
+.blog h1 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.features .features-item {
+  font-weight: 400;
+}
+
+.blog {
+  color: #323232;
+  background: #ffffff url("../img/blog.jpg") no-repeat;
+}
+
+.blog h1 {
+  font-weight: 700;
+}
+.blog a {
+  color: #323232;
+}
+
+.distribution { /*нужно нарисовать градиентом*/
+  background: url("../img/bg-post.svg") no-repeat;
+}
+
+.distribution .background {
+  background-color: #f8f7f4;
+}
+
+.distribution p {
+  font-weight: 400;
+  color: #5a5a5a;
+}
+
+.map {
+  background: #cee0c0 url("../img/map.jpg") no-repeat;
+}
+
+.contacts {
+  color: #323232;
+  background-color: #fffffe;
+}
+
+.contacts p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.contacts .address,
+.contacts .tel {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.contacts .tel {
+  line-height: 22px;
+}
+
+.main-footer {
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.footer-nav {
+  font-size: 13px;
+}
+
+.footer-academy {
+  font-size: 12px;
+  color: #fefefe;
+}
+
+.modal {
+  font-size: 24px;
+  line-height: 28px;
+  color: #323232;
+  background-color: #f8f6f4;
+  border-radius: 10px;
+  /* background-color: rgba(255,255,255,0.3); цвет заливки всего сайта при открытом модальном окне*/
+}
+
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.filters,
+.filter-button {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.filters legend {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filter-button {
+  color: #ffffff;
+  border-radius: 18px;
+  background-color: rgba(255,255,255,0);
+  border: 2px solid #ffffff;
+}
+
+.filter-button:focus,
+.filter-button:hover {
+  outline: none;
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.filter-button:active { /* при нажатии бордер пропадает, надо увеличить размер кнопки */
+  background-color: #ededed;
+  border: 0;
+  box-shadow: inset 0px 2px 1px #696868;
+}
+
+.pagination-list {
+  line-height: 18px;
+  text-align: right;
 }
