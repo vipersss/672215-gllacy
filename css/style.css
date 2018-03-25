@@ -17,6 +17,9 @@ a {
   outline: none;
 }
 
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
