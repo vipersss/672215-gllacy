@@ -31,14 +31,7 @@ html { box-sizing: border-box; }
   overflow: hidden;
 }
 
-.main-nav ul,
-.slider ul,
-.sale ul,
-.hit ul,
-.catalog ul,
-.features ul,
-.main-footer ul,
-.breadcrumbs {
+.list-style-none {
   list-style: none;
 }
 

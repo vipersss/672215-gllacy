@@ -13,10 +13,10 @@
         <a class="logo" href="index.html">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глэйси»">
         </a>
-        <ul class="site-nav">
+        <ul class="site-nav list-style-none">
           <li class="site-nav-active">
             <a href="#">Каталог</a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu list-style-none">
               <li class="dropdown-header">Новинки</li>
               <li class="dropdown-divider"></li>
               <li class="dropdown-item active"><a>Сливочное</a></li>
@@ -28,7 +28,7 @@
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О Компании</a></li>
         </ul>
-        <ul class="second-nav">
+        <ul class="second-nav list-style-none">
           <li>
             <button class="nav-button search">Поиск</button>
             <form class="popup popup-search" method="post" action="https://echo.htmlacademy.ru">
@@ -40,6 +40,7 @@
           <li>
             <button class="nav-button login">Вход</button>
             <section class="popup popup-login">
+              <h2 class="visually-hidden">Форма авторизации</h2>
               <form method="post" action="https://echo.htmlacademy.ru">
                 <p>
                   <label class="visually-hidden" for="user-login">Логин</label>
@@ -60,6 +61,7 @@
           <li>
             <button class="nav-button cart" aria-label="Корзина">2 товара</button> <!-- из лекции по доступности тут должна быть кнопка. т.к. тут только попап. -->
             <section class="popup popup-cart">
+              <h2 class="visually-hidden">Корзина</h2>
               <table class="products">
                 <tr class="product-item">
                   <td class="close">x</td>
@@ -90,7 +92,7 @@
     <main class="container">
       <h1 class="page-title">Сливочное мороженое</h1>
       <h2 class="visually-hidden">Хлебные крошки</h2>
-      <ul class="breadcrumbs">
+      <ul class="breadcrumbs list-style-none">
         <li><a class="link-white" href="index.html">Главная</a></li>
         <li><a class="link-white" href="#">Каталог</a></li>
         <li class="breadcrumbs-current">Сливочное</li>
@@ -106,7 +108,7 @@
               <option value="cheap">Сначала недорогие</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="fat">По жирности</option>
-            /<select>
+            </select>
           </fieldset>
           <fieldset> <!-- двойной range через js. пока оставлю type="range" переделаю когда дойду до нужной лекции-->
             <!-- input type=text 2 штуки для ввода данных. ползунки любые например div.-->
@@ -165,7 +167,7 @@
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
-        <ul class="catalog-list">
+        <ul class="catalog-list list-style-none">
           <li class="catalog-item">
               <h3><a class="link-white" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
               <p>310 ₽<span class="sub">/кг</span></p>
@@ -251,14 +253,14 @@
       </section>
     </main>
     <footer class="main-footer">
-      <ul class="footer-social">
+      <ul class="footer-social list-style-none">
         <li><a class="social-button twitter" href="#">Твиттер</a></li>
         <li><a class="social-button instagram" href="#">Инстаграм</a></li>
         <li><a class="social-button facebook" href="#">Фейсбук</a></li>
         <li><a class="social-button vk" href="#">Вконтакте</a></li>
       </ul>
       <nav class="footer-nav">
-        <ul>
+        <ul class="list-style-none">
           <li><a class="link-white" href="#">Для поставщиков</a></li>
           <li><a class="link-white" href="#">О производстве</a></li>
           <li><a class="link-white" href="#">Наши документы</a></li>
