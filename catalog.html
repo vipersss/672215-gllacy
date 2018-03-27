@@ -103,7 +103,7 @@
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="filter" oninput="costoutput.value=cost.value" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset>
+            <fieldset> <!-- нужно оборачивать fieldset в div т.к. он не воспринимает flex -->
               <legend>Сортировка:</legend>
               <label class="visually-hidden" for="filter-select-sort">Сортировка</label>
               <select id="filter-select-sort" name="sort">
