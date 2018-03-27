@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header container">
       <nav class="main-nav">
         <a class="logo" href="index.html">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глэйси»">
@@ -33,7 +33,7 @@
             <button class="nav-button search">Поиск</button>
             <form class="popup popup-search" method="post" action="https://echo.htmlacademy.ru">
               <label class="visually-hidden" for="search-field">Поиск по сайту</label>
-              <input id="search-field" type="text" name="search" placeholder="Что ищем?">
+              <input id="search-field" type="search" name="search" placeholder="Что ищем?">
               <button class="button visually-hidden" type="submit">Найти</button>
             </form>
           </li>
@@ -52,9 +52,9 @@
                 </p>
                 <button class="button" type="submit">Войти</button>
               </form>
-              <div class="help">
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>
+              <div class="login-help">
+                <a class="link-black" href="#">Забыли пароль?</a>
+                <a class="link-black" href="#">Новая регистрация</a>
               </div>
             </section>
           </li>
@@ -84,19 +84,21 @@
           </li>
         </ul>
       </nav>
-      <div class="main-tel">
-        <p>С 10 до 20, ежедневно</p>
-        <p class="tel">8 812 450-25-25</p>
+      <div class="header-bottom">
+        <h2 class="visually-hidden">Хлебные крошки</h2>
+        <ul class="breadcrumbs list-style-none">
+          <li><a class="link-white" href="index.html">Главная</a></li>
+          <li><a class="link-white" href="#">Каталог</a></li>
+          <li class="breadcrumbs-current">Сливочное</li>
+        </ul>
+        <div class="main-tel">
+          <p>С 10 до 20, ежедневно</p>
+          <p class="tel">8 812 450-25-25</p>
+        </div>
       </div>
     </header>
     <main class="container">
       <h1 class="page-title">Сливочное мороженое</h1>
-      <h2 class="visually-hidden">Хлебные крошки</h2>
-      <ul class="breadcrumbs list-style-none">
-        <li><a class="link-white" href="index.html">Главная</a></li>
-        <li><a class="link-white" href="#">Каталог</a></li>
-        <li class="breadcrumbs-current">Сливочное</li>
-      </ul>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filter" oninput="costoutput.value=cost.value" method="post" action="https://echo.htmlacademy.ru">
@@ -252,21 +254,19 @@
         </ul>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <ul class="footer-social list-style-none">
         <li><a class="social-button twitter" href="#">Твиттер</a></li>
         <li><a class="social-button instagram" href="#">Инстаграм</a></li>
         <li><a class="social-button facebook" href="#">Фейсбук</a></li>
         <li><a class="social-button vk" href="#">Вконтакте</a></li>
       </ul>
-      <nav class="footer-nav">
-        <ul class="list-style-none">
-          <li><a class="link-white" href="#">Для поставщиков</a></li>
-          <li><a class="link-white" href="#">О производстве</a></li>
-          <li><a class="link-white" href="#">Наши документы</a></li>
-          <li><a class="link-white" href="#">Экологические стандарты</a></li>
-        </ul>
-      </nav>
+      <ul class="footer-nav list-style-none">
+        <li><a class="link-white" href="#">Для поставщиков</a></li>
+        <li><a class="link-white" href="#">О производстве</a></li>
+        <li><a class="link-white" href="#">Наши документы</a></li>
+        <li><a class="link-white" href="#">Экологические стандарты</a></li>
+      </ul>
       <a class="footer-academy" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип «HTML Academy»">
         <p>Сделано в <span class="underline">HTML Academy</span> © 2017</p>

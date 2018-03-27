@@ -8,7 +8,7 @@ body {
   line-height: 22px;
   font-weight: 500;
   color: #ffffff;
-  background-color: #839d8f;
+  background-color: #839dff;
 }
 
 a {
@@ -406,7 +406,7 @@ html { box-sizing: border-box; }
 }
 
 .map {
-  background: #cee0c0 url("../img/map.jpg") no-repeat;
+  background: transparent url("../img/map.jpg") no-repeat center center;
 }
 
 .contacts {
@@ -509,11 +509,13 @@ html { box-sizing: border-box; }
 
 
 
-.temp-hidden{
+.popup,
+.modal
+,.dropdown-menu
+{
   display:none
 }
 
-html,
 body {
   min-width: 1200px;
 }
@@ -527,13 +529,14 @@ body {
 .main-header {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   margin-top: 9px;
+  margin-bottom: 284px;
 }
 
 .main-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
@@ -544,16 +547,126 @@ body {
 }
 
 .site-nav {
+  display: flex;
   width: 675px;
+  margin: 0;
+  padding: 0;
   margin-right: auto;
 }
 
 .second-nav {
+  display: flex;
+  width: 267px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header-bottom > *:only-child{
+  margin-left: auto;
+}
+
+.breadcrumbs {
+  display: flex;
+}
+
+.main-tel p,
+.slider-item p,
+.features p,
+.contacts p,
+.footer-academy p {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-list {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.sale-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+
+}
+
+.sale-item {
+  width: 560px;
+}
+
+.hit-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.hit-item {
   width: 267px;
 }
 
+.features {
+  padding: 29px 20px;
+  margin-bottom: 40px;
+}
 
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
 
+.features-item {
+  width: 540px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.wrapper > * {
+  width: 560px;
+}
+
+.map .container {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contacts {
+  width: 303px;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
 
 /* размеры макета*/
 /* 27    267-26-267-13-13-267-26-267    27 */
