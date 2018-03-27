@@ -607,15 +607,27 @@ body {
   width: 560px;
 }
 
-.hit-list {
+.hit-list,
+.catalog-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 40px;
+}
+
+.catalog-list {
+  margin-bottom: 80px; /* После реализации карточки товара возможно нужно будет поменять*/
+}
+
+.hit-item:nth-child(4n),
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .hit-item,
 .catalog-item {
   width: 267px;
+  margin-right: 26px;
+  /* padding: 6px; на выделении товара */
 }
 
 .features {
@@ -689,13 +701,17 @@ body {
 
 .catalog-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 80px; /* После реализации карточки товара возможно нужно будет поменять*/
 }
 
 .catalog-item {
   /* padding: 6px; на выделении товара */
+  margin-right: 26px;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .pagination-list {
