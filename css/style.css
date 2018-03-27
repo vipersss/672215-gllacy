@@ -530,14 +530,16 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 9px;
-  margin-bottom: 284px;
+}
+
+.main-header + .main-page {
+  margin-top: 284px;
 }
 
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 .logo {
@@ -549,16 +551,12 @@ body {
 .site-nav {
   display: flex;
   width: 675px;
-  margin: 0;
-  padding: 0;
   margin-right: auto;
 }
 
 .second-nav {
   display: flex;
   width: 267px;
-  margin: 0;
-  padding: 0;
 }
 
 .header-bottom {
@@ -592,8 +590,6 @@ body {
 .sale-list {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
   margin-bottom: 40px;
 
 }
@@ -605,8 +601,6 @@ body {
 .hit-list {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
   margin-bottom: 40px;
 }
 
@@ -622,8 +616,6 @@ body {
 .features-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
 }
 
 .features-item {
@@ -633,8 +625,6 @@ body {
 .wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
   margin-bottom: 40px;
 }
 
@@ -666,6 +656,10 @@ body {
 .footer-nav {
   display: flex;
   flex-direction: column;
+}
+
+.page-title h1 {
+
 }
 
 /* размеры макета*/
