@@ -436,6 +436,10 @@ html { box-sizing: border-box; }
   font-weight: 400;
 }
 
+.border-footer {
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
 .footer-nav {
   font-size: 13px;
 }
@@ -536,6 +540,10 @@ body {
   margin-top: 284px;
 }
 
+.main-header + .inner-page {
+  margin-top: 10px;
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -577,7 +585,8 @@ body {
 .slider-item p,
 .features p,
 .contacts p,
-.footer-academy p {
+.footer-academy p,
+.page-title {
   margin: 0;
   padding: 0;
 }
@@ -604,7 +613,8 @@ body {
   margin-bottom: 40px;
 }
 
-.hit-item {
+.hit-item,
+.catalog-item {
   width: 267px;
 }
 
@@ -643,7 +653,7 @@ body {
   width: 303px;
 }
 
-.main-footer {
+.main-footer div{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -658,9 +668,43 @@ body {
   flex-direction: column;
 }
 
-.page-title h1 {
-
+.main-flex {
+  display: flex;
+  flex-direction: column;
 }
+
+.page-title {
+  margin-bottom: 30px;
+}
+
+.filters {
+  margin-bottom: 34px;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  width: 860px;
+}
+
+.catalog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 80px; /* После реализации карточки товара возможно нужно будет поменять*/
+}
+
+.catalog-item {
+  /* padding: 6px; на выделении товара */
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+
 
 /* размеры макета*/
 /* 27    267-26-267-13-13-267-26-267    27 */
