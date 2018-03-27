@@ -33,6 +33,8 @@ html { box-sizing: border-box; }
 
 .list-style-none {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .site-nav {
@@ -499,3 +501,71 @@ html { box-sizing: border-box; }
   line-height: 18px;
   text-align: right;
 }
+
+
+
+
+
+
+
+
+.temp-hidden{
+  display:none
+}
+
+html,
+body {
+  min-width: 1200px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 9px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  width: 154px;
+  height: 64px;
+  margin-right: 24px;
+}
+
+.site-nav {
+  width: 675px;
+  margin-right: auto;
+}
+
+.second-nav {
+  width: 267px;
+}
+
+
+
+
+/* размеры макета*/
+/* 27    267-26-267-13-13-267-26-267    27 */
+
+/* контейнер */
+/* 1200 c padding 27 */
+
+/* логотип */
+/* 154+24 = 178*/
+
+/* меню1 */
+/* 267-26-267-13-13-267 = 853-178 = 675 */
+
+/* меню2 */
+/* 267 */

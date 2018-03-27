@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header container">
       <nav class="main-nav">
         <a class="logo">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глэйси»">
@@ -16,7 +16,7 @@
         <ul class="site-nav list-style-none">
           <li>
             <a href="#">Каталог</a>
-            <ul class="dropdown-menu list-style-none">
+            <ul class="dropdown-menu list-style-none temp-hidden">
               <li class="dropdown-header">Новинки</li>
               <li class="dropdown-divider"></li>
               <li class="dropdown-item"><a href="catalog.html">Сливочное</a></li>
@@ -31,7 +31,7 @@
         <ul class="second-nav list-style-none">
           <li>
             <button class="nav-button search">Поиск</button>
-            <form class="popup popup-search" method="post" action="https://echo.htmlacademy.ru">
+            <form class="popup popup-search temp-hidden" method="post" action="https://echo.htmlacademy.ru">
               <label class="visually-hidden" for="search-field">Поиск по сайту</label>
               <input id="search-field" type="search" name="search" placeholder="Что ищем?">
               <button class="button visually-hidden" type="submit">Найти</button>
@@ -39,7 +39,7 @@
           </li>
           <li>
             <button class="nav-button login">Вход</button>
-            <section class="popup popup-login">
+            <section class="popup popup-login temp-hidden">
               <h2 class="visually-hidden">Форма авторизации</h2>
               <form method="post" action="https://echo.htmlacademy.ru">
                 <p>
