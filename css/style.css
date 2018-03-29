@@ -8,7 +8,6 @@ body {
   line-height: 22px;
   font-weight: 500;
   color: #ffffff;
-  background-color: #4195a0;
 }
 
 a {
@@ -48,6 +47,29 @@ input[type="radio"].visually-hidden {
 
 .underline {
   border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.site-wrapper {
+  min-width: 940px;
+  background-color: #849d8f;
+  background-image: url("../img/ice-cream-back-1-temp.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: url("../img/ice-cream-back-2-temp.png");
+}
+
+.site-wrapper::after {
+  background-image: url("../img/ice-cream-back-2-temp.png");
 }
 
 .container {
@@ -127,7 +149,6 @@ input[type="radio"].visually-hidden {
   align-items: center;
   margin-top: 5px;
 }
-
 
 .nav-button {
   font: inherit;
@@ -228,11 +249,102 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
+.slider {
+  position: relative;
+  padding-top: 321px;
+  text-align: center;
+}
 
+.slide {
+  display: none;
+}
 
+.slider-item {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+}
 
+.slider-controls {
+  position: absolute;
+  bottom: 63px;
+  left: 0;
+  z-index: 20;
+  font-size: 0;
+}
 
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: top;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
+#product-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/ice-cream-back-1-temp.png");
+}
+
+#product-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/ice-cream-back-2-temp.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/ice-cream-back-3-temp.png");
+}
+
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
+  background-color: #ffffff;
+}
+
+.slider-item .button {
+  font-size: 32px;
+  line-height: 44px;
+  padding: 12px 44px;
+  text-shadow: 0px 2px 5px rgba(159,31,10,0.76);
+  border-radius: 32px;
+}
+
+.button {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  border: 0px;
+  box-shadow: 0px 2px 2px rgba(171,16,0,0.64);
+  background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%)
+}
+
+.button:focus,
+.button:hover { /* Еще не дошел до лекции про сложные градиенты*/
+  outline: none;
+  box-shadow: 0px 2px 2px #ab1000;
+  /* background-color: rgba(255,255,255,0.2); */
+  /* background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%); */
+}
+
+.button:active { /* Еще не дошел до лекции про сложные градиенты*/
+  box-shadow: inset 0px 2px 2px #942617;
+  background-image: linear-gradient(0deg, #f16843 0%, #e74a35 100%);
+  /* background-color: rgba(0,0,0,0.07); */
+}
 
 .dropdown-menu {
   font-size: 14px;
@@ -387,32 +499,7 @@ input[type="radio"].visually-hidden {
 
 
 
-.slider-item {
-  font-size: 60px;
-  line-height: 60px;
-  color: #ffffff;
-  font-weight: 700;
-  text-align: center;
-}
 
-.slider-list .slider-item:nth-of-type(1) {
-  background: #839d8f url("../img/ice-cream-back-1-temp.png") no-repeat;
-}
-
-.slider-list .slider-item:nth-of-type(2) {
-  background: #8896a6 url("../img/ice-cream-back-2-temp.png") no-repeat;
-}
-
-.slider-list .slider-item:nth-of-type(3) {
-  background: #9d8b83 url("../img/ice-cream-back-3-temp.png") no-repeat;
-}
-
-.slider-item .button {
-  font-size: 32px;
-  line-height: 44px;
-  text-shadow: 0px 2px 5px rgba(159,31,10,0.76);
-  border-radius: 32px;
-}
 
 .popup-login .button,
 .popup-cart .button,
@@ -426,29 +513,6 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 24px;
   border-radius: 23px;
-}
-
-.button {
-  color: #ffffff;
-  font-weight: 700;
-  text-align: center;
-  border: 0px;
-  box-shadow: 0px 2px 2px rgba(171,16,0,0.64);
-  background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%);
-}
-
-.button:focus,
-.button:hover { /* Еще не дошел до лекции про сложные градиенты*/
-  outline: none;
-  box-shadow: 0px 2px 2px #ab1000;
-  /* background-color: rgba(255,255,255,0.2); */
-  /* background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%); */
-}
-
-.button:active { /* Еще не дошел до лекции про сложные градиенты*/
-  box-shadow: inset 0px 2px 2px #942617;
-  background-image: linear-gradient(0deg, #f16843 0%, #e74a35 100%);
-  /* background-color: rgba(0,0,0,0.07); */
 }
 
 .sale-list .sale-item:nth-of-type(1) {
@@ -666,8 +730,9 @@ input[type="radio"].visually-hidden {
 
 
 
-.main-header + .main-page {
-  margin-top: 284px;
+ .main-header + .main-page {
+  /* margin-top: 284px; */
+  /* margin-bottom: 584px; */
 }
 
 /* .main-header + .inner-page { */
@@ -692,10 +757,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
-.slider-list {
-  display: flex;
-  margin-bottom: 40px;
-}
+
 
 .sale-list {
   display: flex;
