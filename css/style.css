@@ -49,26 +49,31 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.site-wrapper {
+.main-page .site-wrapper {
   min-width: 940px;
   background-color: #849d8f;
-  /* background-image: url("../img/ice-cream-back-1-temp.png"); */
+  background-image: url("../img/ice-cream-back-1-temp.png");
   background-repeat: no-repeat;
   background-position: top center;
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
-.site-wrapper::before,
-.site-wrapper::after {
+.inner-page .site-wrapper {
+  min-width: 940px;
+  background-color: #849d8f;
+}
+
+.main-page .site-wrapper::before,
+.main-page .site-wrapper::after {
   content: "";
   visibility: hidden;
 }
 
-.site-wrapper::before {
+.main-page .site-wrapper::before {
   background-image: url("../img/ice-cream-back-2-temp.png");
 }
 
-.site-wrapper::after {
+.main-page .site-wrapper::after {
   background-image: url("../img/ice-cream-back-3-temp.png");
 }
 
@@ -328,7 +333,10 @@ input[type="radio"].visually-hidden {
 .button {
   display: inline-block;
   color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 700;
+  border-radius: 22px;
   text-align: center;
   vertical-align: top;
   text-decoration: none;
@@ -358,6 +366,58 @@ input[type="radio"].visually-hidden {
   box-shadow: inset 0px 2px 2px rgba(159,31,10,1);
   background-image: linear-gradient(0deg, #f16843 0%, #e74a35 100%);
 }
+
+.sale-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.sale-item {
+  width: 560px;
+  padding: 16px 18px 24px;
+  border-radius: 15px;
+}
+
+.sale-item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.sale-item p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  letter-spacing: 0.05px;
+  margin-bottom: 44px;
+}
+
+.sale-item .button {
+  float: right;
+  margin-right: 2px;
+  padding: 10px 24px;
+  padding-bottom: 12px;
+}
+
+.sale-list .sale-item:nth-of-type(1) {
+  background: #911b2d url("../img/raspberry.jpg") no-repeat;
+}
+
+.sale-list .sale-item:nth-of-type(2) {
+  background: #503225 url("../img/chocolate.jpg") no-repeat;
+}
+
+
+
+
+
+
 
 
 
@@ -523,7 +583,6 @@ input[type="radio"].visually-hidden {
 
 .popup-login .button,
 .popup-cart .button,
-.sale-item .button,
 .hit-item .button,
 .catalog-item .button,
 .popup-dist .button,
@@ -535,15 +594,6 @@ input[type="radio"].visually-hidden {
   border-radius: 23px;
 }
 
-.sale-list .sale-item:nth-of-type(1) {
-  background: #911b2d url("../img/raspberry.jpg") no-repeat;
-}
-
-.sale-list .sale-item:nth-of-type(2) {
-  background: #503225 url("../img/chocolate.jpg") no-repeat;
-}
-
-.sale-item,
 .features,
 .blog,
 .distribution,
@@ -553,18 +603,6 @@ input[type="radio"].visually-hidden {
 
 .distribution .background {
   border-radius: 10px;
-}
-
-.sale-item h3 {
-  font-size: 35px;
-  line-height: 41px;
-  font-weight: 700;
-}
-
-.sale-item p {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 700;
 }
 
 .hit-item h3,
@@ -744,26 +782,6 @@ input[type="radio"].visually-hidden {
   display:none
 }
 
-
-
-
-
-
-
- .main-header + .main-page {
-  /* margin-top: 284px; */
-  /* margin-bottom: 584px; */
-}
-
-/* .main-header + .inner-page { */
-  /* margin-top: 10px; */
-/* } */
-
-
-
-
-
-
 .breadcrumbs {
   display: flex;
 }
@@ -774,19 +792,6 @@ input[type="radio"].visually-hidden {
 .page-title {
   margin: 0;
   padding: 0;
-}
-
-
-
-.sale-list {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-
-}
-
-.sale-item {
-  width: 560px;
 }
 
 .hit-list,
