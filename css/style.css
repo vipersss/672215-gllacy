@@ -52,7 +52,7 @@ input[type="radio"].visually-hidden {
 .site-wrapper {
   min-width: 940px;
   background-color: #849d8f;
-  background-image: url("../img/ice-cream-back-1-temp.png");
+  /* background-image: url("../img/ice-cream-back-1-temp.png"); */
   background-repeat: no-repeat;
   background-position: top center;
   transition: background-image 0.5s ease, background-color 0.5s ease;
@@ -69,7 +69,7 @@ input[type="radio"].visually-hidden {
 }
 
 .site-wrapper::after {
-  background-image: url("../img/ice-cream-back-2-temp.png");
+  background-image: url("../img/ice-cream-back-3-temp.png");
 }
 
 .container {
@@ -251,8 +251,9 @@ input[type="radio"].visually-hidden {
 
 .slider {
   position: relative;
-  padding-top: 321px;
+  margin-top: 276px;
   text-align: center;
+  margin-bottom: 42px;
 }
 
 .slide {
@@ -265,12 +266,17 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 27px;
+}
+
+.slider-item p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 28px;
 }
 
 .slider-controls {
   position: absolute;
-  bottom: 63px;
+  bottom: 20px;
   left: 0;
   z-index: 20;
   font-size: 0;
@@ -278,14 +284,18 @@ input[type="radio"].visually-hidden {
 
 .slider-controls label {
   display: inline-block;
-  width: 17px;
-  height: 17px;
+  width: 21px;
+  height: 21px;
   margin-right: 8px;
   vertical-align: top;
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-controls label:hover {
+  background: rgba(255,255,255,0.4);
 }
 
 #product-1:checked ~ .site-wrapper {
@@ -315,36 +325,46 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-.slider-item .button {
-  font-size: 32px;
-  line-height: 44px;
-  padding: 12px 44px;
-  text-shadow: 0px 2px 5px rgba(159,31,10,0.76);
-  border-radius: 32px;
-}
-
 .button {
+  display: inline-block;
   color: #ffffff;
   font-weight: 700;
   text-align: center;
-  border: 0px;
+  vertical-align: top;
+  text-decoration: none;
+  border: none;
   box-shadow: 0px 2px 2px rgba(171,16,0,0.64);
-  background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%)
+  background: #f26843;
+  background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%);
+  cursor: pointer;
+}
+
+.slider-item .button {
+  font-size: 32px;
+  line-height: 44px;
+  padding: 10px 40px;
+  text-shadow: 0px 2px 5px rgba(159,31,10,0.76);
+  border-radius: 50px;
 }
 
 .button:focus,
-.button:hover { /* Еще не дошел до лекции про сложные градиенты*/
+.button:hover {
   outline: none;
-  box-shadow: 0px 2px 2px #ab1000;
-  /* background-color: rgba(255,255,255,0.2); */
-  /* background-image: linear-gradient(0deg, #e74a35 0%, #f16843 100%); */
+  background-image: linear-gradient(0deg, #f58569 0%, #ec6f5e 100%);
+  box-shadow: 0px 2px 2px rgba(159,31,10,1);
 }
 
-.button:active { /* Еще не дошел до лекции про сложные градиенты*/
-  box-shadow: inset 0px 2px 2px #942617;
+.button:active {
+  box-shadow: inset 0px 2px 2px rgba(159,31,10,1);
   background-image: linear-gradient(0deg, #f16843 0%, #e74a35 100%);
-  /* background-color: rgba(0,0,0,0.07); */
 }
+
+
+
+
+
+
+
 
 .dropdown-menu {
   font-size: 14px;
@@ -748,7 +768,6 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
-.slider-item p,
 .features p,
 .contacts p,
 .footer-academy p,
