@@ -39,31 +39,33 @@
                 <form class="popup popup-search" method="post" action="https://echo.htmlacademy.ru">
                   <label class="visually-hidden" for="search-field">Поиск по сайту</label>
                   <input id="search-field" type="search" name="search" placeholder="Что ищем?">
-                  <button class="button visually-hidden" type="submit">Найти</button>
+                  <button class="button visually-hidden" type="submit" tabindex="-1">Найти</button>
                 </form>
               </div>
             </div>
             <ul class="user-nav list-style-type">
-            <li>
+            <li class="user-nav-login">
               <button class="nav-button login">Вход</button>
-              <section class="popup popup-login">
-                <h2 class="visually-hidden">Форма авторизации</h2>
-                <form method="post" action="https://echo.htmlacademy.ru">
-                  <p>
-                    <label class="visually-hidden" for="user-login">Логин</label>
-                    <input class="login-user" id="user-login" type="email" name="login" placeholder="Электронная почта">
-                  </p>
-                  <p>
-                    <label class="visually-hidden" for="user-password">Пароль</label>
-                    <input class="login-password" id="user-password" type="password" name="password" placeholder="Пароль">
-                  </p>
-                  <button class="button" type="submit">Войти</button>
-                </form>
-                <div class="login-help">
-                  <a class="link-black" href="#">Забыли пароль?</a>
-                  <a class="link-black" href="#">Новая регистрация</a>
-                </div>
-              </section>
+              <div class="popup-wrapper">
+                <section class="popup popup-login">
+                  <h2 class="visually-hidden">Форма авторизации</h2>
+                  <form method="post" action="https://echo.htmlacademy.ru">
+                    <p>
+                      <label class="visually-hidden" for="user-login">Логин</label>
+                      <input class="login-user" id="user-login" type="email" name="login" placeholder="Электронная почта">
+                    </p>
+                    <p>
+                      <label class="visually-hidden" for="user-password">Пароль</label>
+                      <input class="login-password" id="user-password" type="password" name="password" placeholder="Пароль">
+                    </p>
+                    <button class="button" type="submit">Войти</button>
+                  </form>
+                  <div class="login-help">
+                    <a class="link-black" href="#">Забыли пароль?</a>
+                    <a class="link-black" href="#">Новая регистрация</a>
+                  </div>
+                </section>
+              </div>
             </li>
             <li>
               <button class="nav-button cart" aria-label="Корзина">2 товара</button> <!-- из лекции по доступности тут должна быть кнопка. т.к. тут только попап. -->

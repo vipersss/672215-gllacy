@@ -228,8 +228,13 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/loupe.svg");
 }
 
-.main-search:hover .popup-wrapper {
+.main-search:hover .popup-wrapper,
+.user-nav-login:hover .popup-wrapper {
   display: block;
+}
+
+.user-nav-login {
+  position: relative;
 }
 
 .user-nav {
@@ -775,6 +780,33 @@ input[type="radio"].visually-hidden {
   padding: 20px 15px;
 }
 
+.popup .button{
+  min-width: 100px;
+  padding: 10px 17px;
+}
+
+.popup-login {
+  position: relative;
+  padding: 19px 18px;
+  width: 277px;
+}
+
+.popup-login p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 19px;
+}
+
+.login-help {
+  position: absolute;
+  right: 25px;
+  bottom: 19px;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  width: 120px;
+}
+
 .map {
   background: transparent url("../img/map-pin.jpg") no-repeat center center;
 }
@@ -1026,11 +1058,6 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid rgba(249,172,159,0.3);
 }
 
-.login-help a {
-  font-size: 13px;
-  line-height: 24px;
-  font-weight: 400;
-}
 
 
 
@@ -1039,7 +1066,7 @@ input[type="radio"].visually-hidden {
 
 
 
-.popup-login .button,
+
 .popup-cart .button,
 .catalog-item .button,
 .popup-dist .button,
@@ -1132,7 +1159,6 @@ input[type="radio"].visually-hidden {
 
 
 
-.popup-login,
 .popup-cart,
 .modal
 {
