@@ -452,6 +452,10 @@ input[type="radio"].visually-hidden {
 
 .hit-item p {
   position: absolute;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  text-shadow: 0.5px 0.866px 3px rgba(49,50,53,0.5);
   bottom: 0;
   margin: 0;
   padding: 14px 0px;
@@ -507,7 +511,7 @@ input[type="radio"].visually-hidden {
 
 .features {
   padding: 24px 20px;
-  padding-bottom: 14px;
+  padding-bottom: 16px;
   margin-bottom: 40px;
   border-radius: 15px;
   color: #323232;
@@ -560,6 +564,111 @@ input[type="radio"].visually-hidden {
 
 .feature-thermometer::before {
   background: url("../img/thermometer.svg") no-repeat 0 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.wrapper > * {
+  width: 560px;
+}
+
+.blog {
+  padding: 20px;
+  border-radius: 15px;
+  color: #323232;
+  background: #ffffff url("../img/blog.jpg") no-repeat;
+}
+
+.blog p {
+  padding: 4px 0px;
+  margin: 0;
+}
+
+.blog h1 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  width: 290px;
+  padding: 0;
+  margin: 0;
+}
+
+.distribution { /*нужно нарисовать градиентом*/
+  padding: 6px;
+  border-radius: 15px;
+  background: url("../img/bg-post.svg") no-repeat;
+}
+
+.distribution .background {
+  padding: 28px 20px;
+  border-radius: 10px;
+  background-color: #f8f7f4;
+}
+
+.distribution p {
+  font-weight: 400;
+  color: #5a5a5a;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.form-dist {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.form-dist input {
+  flex-grow: 1;
+}
+
+.form-dist .button {
+  padding: 0px 20px;
+  margin-left: 10px;
+}
+
+.form-dist input {
+  font: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #323232;
+  height: 44px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1px solid rgba(178,178,178,0.52);
+  padding: 9px 15px;
+  outline: none;
+}
+
+.form-dist input:hover {
+  border: 2px solid rgba(154,154,154,0.52);
+  padding: 8px 14px;
+}
+
+.form-dist input:focus {
+  border: 2px solid rgba(46,136,228,0.52);
+  padding: 8px 14px;
+}
+
+.form-dist input::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.form-dist input::-moz-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.form-dist input:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
 }
 
 
@@ -618,7 +727,6 @@ input[type="radio"].visually-hidden {
 }
 
 .popup input,
-.form-dist input,
 .modal-feedback input,
 .modal-feedback textarea {
   font: inherit;
@@ -633,22 +741,18 @@ input[type="radio"].visually-hidden {
 }
 
 .popup input:hover,
-.form-dist input:hover,
 .modal-feedback input:hover,
 .modal-feedback textarea:hover {
   border: 2px solid rgba(154,154,154,0.52);
 }
 
 .popup input:focus,
-.form-dist input:focus,
 .modal-feedback input:focus,
-.modal-feedback textarea:focus
- {
+.modal-feedback textarea:focus {
   border: 2px solid rgba(46,136,228,0.52);
 }
 
 .popup input::-webkit-input-placeholder,
-.form-dist input::-webkit-input-placeholder,
 .modal-feedback input::-webkit-input-placeholder,
 .modal-feedback textarea::-webkit-input-placeholder {
   font-weight: 400;
@@ -656,7 +760,6 @@ input[type="radio"].visually-hidden {
 }
 
 .popup input::-moz-placeholder,
-.form-dist input::-moz-placeholder,
 .modal-feedback input::-moz-placeholder,
 .modal-feedback textarea::-moz-placeholder {
   font-weight: 400;
@@ -664,7 +767,6 @@ input[type="radio"].visually-hidden {
 }
 
 .popup input:-ms-input-placeholder,
-.form-dist input:-ms-input-placeholder,
 .modal-feedback input:-ms-input-placeholder,
 .modal-feedback textarea:-ms-input-placeholder {
   font-weight: 400;
@@ -729,7 +831,6 @@ input[type="radio"].visually-hidden {
 .popup-cart .button,
 .catalog-item .button,
 .popup-dist .button,
-.form-dist .button,
 .contacts .button,
 .modal-feedback .button {
   font-size: 18px;
@@ -737,14 +838,8 @@ input[type="radio"].visually-hidden {
   border-radius: 23px;
 }
 
-.blog,
-.distribution,
 .contacts {
   border-radius: 15px;
-}
-
-.distribution .background {
-  border-radius: 10px;
 }
 
 .hit-item h3,
@@ -752,7 +847,6 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.hit-item p,
 .catalog-item p {
   font-size: 45px;
   line-height: 45px;
@@ -767,36 +861,6 @@ input[type="radio"].visually-hidden {
 .hit-item img,
 .catalog-item img {
   border-radius: 50%;
-}
-
-.blog h1 {
-  font-size: 24px;
-  line-height: 30px;
-}
-
-.blog {
-  color: #323232;
-  background: #ffffff url("../img/blog.jpg") no-repeat;
-}
-
-.blog h1 {
-  font-weight: 700;
-}
-.blog a {
-  color: #323232;
-}
-
-.distribution { /*нужно нарисовать градиентом*/
-  background: url("../img/bg-post.svg") no-repeat;
-}
-
-.distribution .background {
-  background-color: #f8f7f4;
-}
-
-.distribution p {
-  font-weight: 400;
-  color: #5a5a5a;
 }
 
 .map {
@@ -942,16 +1006,6 @@ input[type="radio"].visually-hidden {
 .catalog-item {
   width: 267px;
   margin-right: 26px;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.wrapper > * {
-  width: 560px;
 }
 
 .map .container {
