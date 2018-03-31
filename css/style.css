@@ -413,10 +413,97 @@ input[type="radio"].visually-hidden {
   background: #503225 url("../img/chocolate.jpg") no-repeat;
 }
 
+.hit-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
 
+.hit-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 267px;
+  margin-right: 26px;
+  /* padding: 6px; на выделении товара */
+}
 
+.hit-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background: url("../img/hit.svg") no-repeat 0 0;
+  z-index: 2;
+}
 
+.hit-item:nth-child(4n) {
+  margin-right: 0;
+}
 
+.hit-item .preview {
+  position: relative;
+  order: -1;
+  z-index: 1;
+}
+
+.hit-item p {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 14px 0px;
+}
+
+.preview .sub {
+  position: relative;
+  font-size: 30px;
+  padding-left: 35px;
+}
+
+.preview .sub::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  width: 31px;
+  height: 36px;
+  background: url("../img/ruble.svg") no-repeat 0 0;
+}
+
+.hit-item h3 {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+  z-index: 1;
+}
+
+.hit-item-wrap {
+  display: none;
+  flex-direction: column-reverse;
+  align-items: center;
+  position: absolute;
+  top: -8px;
+  bottom: -78px;
+  left: -10px;
+  right: -10px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.2);
+  box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
+}
+
+.hit-item-wrap .button {
+  margin-bottom: 20px;
+  padding: 10px 17px;
+}
+
+.hit-item:hover .hit-item-wrap {
+  display: flex;
+}
 
 
 
@@ -583,7 +670,6 @@ input[type="radio"].visually-hidden {
 
 .popup-login .button,
 .popup-cart .button,
-.hit-item .button,
 .catalog-item .button,
 .popup-dist .button,
 .form-dist .button,
@@ -618,7 +704,6 @@ input[type="radio"].visually-hidden {
   text-shadow: 0.5px 0.866px 3px rgba(49,50,53,0.5);
 }
 
-.hit-item .sub,
 .catalog-item .sub {
   font-size: 30px;
 }
@@ -794,7 +879,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
-.hit-list,
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
@@ -805,16 +889,13 @@ input[type="radio"].visually-hidden {
   margin-bottom: 80px; /* После реализации карточки товара возможно нужно будет поменять*/
 }
 
-.hit-item:nth-child(4n),
 .catalog-item:nth-child(4n) {
   margin-right: 0;
 }
 
-.hit-item,
 .catalog-item {
   width: 267px;
   margin-right: 26px;
-  /* padding: 6px; на выделении товара */
 }
 
 .features {
