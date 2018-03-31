@@ -505,6 +505,63 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
+.features {
+  padding: 24px 20px;
+  padding-bottom: 14px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  color: #323232;
+  background: #ecdfc4 url("../img/wafer.jpg") no-repeat;
+}
+
+.features p {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.features-item {
+  width: 540px;
+  font-weight: 400;
+
+  position: relative;
+  padding: 11px 0px;
+  padding-left: 58px;
+}
+
+.features-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 49px;
+  height: 49px;
+}
+
+.feature-ice-cream::before {
+  background: url("../img/ice-cream.svg") no-repeat 0 0;
+}
+
+.feature-cow::before {
+  background: url("../img/cow.svg") no-repeat 0 0;
+}
+
+.feature-eco::before {
+  background: url("../img/eco.svg") no-repeat 0 0;
+}
+
+.feature-thermometer::before {
+  background: url("../img/thermometer.svg") no-repeat 0 0;
+}
+
 
 
 
@@ -680,7 +737,6 @@ input[type="radio"].visually-hidden {
   border-radius: 23px;
 }
 
-.features,
 .blog,
 .distribution,
 .contacts {
@@ -713,18 +769,9 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.features {
-  color: #323232;
-  background: #ecdfc4 url("../img/wafer.jpg") no-repeat;
-}
-.features p,
 .blog h1 {
   font-size: 24px;
   line-height: 30px;
-}
-
-.features .features-item {
-  font-weight: 400;
 }
 
 .blog {
@@ -871,7 +918,6 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
-.features p,
 .contacts p,
 .footer-academy p,
 .page-title {
@@ -896,20 +942,6 @@ input[type="radio"].visually-hidden {
 .catalog-item {
   width: 267px;
   margin-right: 26px;
-}
-
-.features {
-  padding: 29px 20px;
-  margin-bottom: 40px;
-}
-
-.features-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.features-item {
-  width: 540px;
 }
 
 .wrapper {
