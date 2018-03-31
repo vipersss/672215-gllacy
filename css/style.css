@@ -416,7 +416,7 @@ input[type="radio"].visually-hidden {
 .hit-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .hit-item {
@@ -459,6 +459,10 @@ input[type="radio"].visually-hidden {
   bottom: 0;
   margin: 0;
   padding: 14px 0px;
+}
+
+.hit-item h3 {
+  text-align: center;
 }
 
 .preview .sub {
@@ -671,6 +675,58 @@ input[type="radio"].visually-hidden {
   color: #999999;
 }
 
+.map {
+  background: transparent url("../img/map-pin.jpg") no-repeat center center;
+}
+
+.map .container {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+
+.contacts {
+  position: relative;
+  width: 300px;
+  color: #323232;
+  background-color: #fffffe;
+  border-radius: 15px;
+  padding: 28px 25px;
+}
+
+.contacts p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 26px;
+}
+
+.contacts .address,
+.contacts .tel {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  padding-top: 2px;
+  padding-bottom: 17px;
+}
+
+.contacts .tel {
+  line-height: 22px;
+  padding-top: 6px;
+  padding-bottom: 2px;
+}
+
+.contacts .button {
+  width: 100%;
+  padding: 8px 23px 12px;
+}
+
+
+
 
 
 
@@ -831,18 +887,12 @@ input[type="radio"].visually-hidden {
 .popup-cart .button,
 .catalog-item .button,
 .popup-dist .button,
-.contacts .button,
 .modal-feedback .button {
   font-size: 18px;
   line-height: 24px;
   border-radius: 23px;
 }
 
-.contacts {
-  border-radius: 15px;
-}
-
-.hit-item h3,
 .catalog-item h3 {
   text-align: center;
 }
@@ -861,32 +911,6 @@ input[type="radio"].visually-hidden {
 .hit-item img,
 .catalog-item img {
   border-radius: 50%;
-}
-
-.map {
-  background: transparent url("../img/map.jpg") no-repeat center center;
-}
-
-.contacts {
-  color: #323232;
-  background-color: #fffffe;
-}
-
-.contacts p {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-.contacts .address,
-.contacts .tel {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-}
-
-.contacts .tel {
-  line-height: 22px;
 }
 
 .main-footer {
@@ -982,7 +1006,6 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
-.contacts p,
 .footer-academy p,
 .page-title {
   margin: 0;
@@ -1006,17 +1029,6 @@ input[type="radio"].visually-hidden {
 .catalog-item {
   width: 267px;
   margin-right: 26px;
-}
-
-.map .container {
-  display: flex;
-  flex-direction: row-reverse;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.contacts {
-  width: 303px;
 }
 
 .main-footer div{
