@@ -737,13 +737,19 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   padding-top: 18px;
   padding-bottom: 22px;
-
-  /* margin: 20px 0px; */
 }
 
 .footer-social {
   display: flex;
   margin-top: 14px;
+}
+
+.footer-social li {
+  margin-right: 12px;
+}
+
+.footer-social li:last-child {
+  margin-right: 0px;
 }
 
 .social-button {
@@ -753,14 +759,6 @@ input[type="radio"].visually-hidden {
   border: 3px solid rgba(225,225,225,0.5);
   border-radius: 50%;
 }
-
-.footer-social li {
-  margin-right: 12px;
-}
-.footer-social li:last-child {
-  margin-right: 0px;
-}
-
 
 .social-button:hover,
 .social-button:focus,
@@ -822,6 +820,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-nav-item.heart{
+  font-weight: 700;
   background: url("../img/heart.svg") no-repeat left center;
 }
 
