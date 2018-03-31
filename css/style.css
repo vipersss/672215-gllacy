@@ -186,33 +186,50 @@ input[type="radio"].visually-hidden {
   border-radius: 0px;
   background-color: transparent;
   padding: 6px 20px;
-  margin: 6px 0px;
+  margin: 3px 0px;
 }
 
-.dropdown-item:hover,
 .dropdown-item a:hover,
 .dropdown-item a:focus {
   background-color: #fbddd7;
   border-radius: 0px;
 }
 
-.dropdown-item:active,
 .dropdown-item a:active {
   background-color: #f6b4a4;
   box-shadow: none;
+  border-radius: 0px;
 }
 
-.dropdown-item.active,
 .dropdown-item.active a{
   color: #ffffff;
   background-color: #cf6f57;
+  border-radius: 0px;
 }
 
 .main-search {
+  position: relative;
   display: flex;
-  align-items: center;
+  align-self: center;
   margin-left: auto;
   margin-top: 5px;
+}
+
+.search {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/loupe-white.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.search:hover,
+.search:focus {
+  background-image: url("../img/loupe.svg");
+}
+
+.main-search:hover .popup-wrapper {
+  display: block;
 }
 
 .user-nav {
@@ -286,19 +303,6 @@ input[type="radio"].visually-hidden {
 .login:hover::before,
 .login:focus::before {
   background-image: url("../img/entrance.svg");
-}
-
-.search {
-  width: 32px;
-  height: 32px;
-  background-image: url("../img/loupe-white.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.search:hover,
-.search:focus {
-  background-image: url("../img/loupe.svg");
 }
 
 .main-contacts {
@@ -494,6 +498,10 @@ input[type="radio"].visually-hidden {
   width: 267px;
   margin-right: 26px;
   /* padding: 6px; на выделении товара */
+}
+
+.hit-item img {
+  border-radius: 50%;
 }
 
 .hit-item::before {
@@ -703,6 +711,7 @@ input[type="radio"].visually-hidden {
   margin-left: 10px;
 }
 
+.popup input,
 .form-dist input {
   font: inherit;
   font-size: 16px;
@@ -717,29 +726,53 @@ input[type="radio"].visually-hidden {
   outline: none;
 }
 
+.popup-search input {
+  width: 312px;
+}
+
+.popup input:hover,
 .form-dist input:hover {
   border: 2px solid rgba(154,154,154,0.52);
   padding: 8px 14px;
 }
 
+.popup input:focus,
 .form-dist input:focus {
   border: 2px solid rgba(46,136,228,0.52);
   padding: 8px 14px;
 }
 
+.popup input::-webkit-input-placeholder,
 .form-dist input::-webkit-input-placeholder {
   font-weight: 400;
   color: #999999;
 }
 
+.popup input::-moz-placeholder,
 .form-dist input::-moz-placeholder {
   font-weight: 400;
   color: #999999;
 }
 
+.popup input:-ms-input-placeholder,
 .form-dist input:-ms-input-placeholder {
   font-weight: 400;
   color: #999999;
+}
+
+.popup-wrapper {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: 10px;
+}
+
+.popup {
+  border-radius: 6px;
+  box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
+  background-color: #f7f7f3;
+  padding: 20px 15px;
 }
 
 .map {
@@ -909,13 +942,8 @@ input[type="radio"].visually-hidden {
 
 
 
-.popup {
-  border-radius: 6px;
-  box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
-  background-color: #f7f7f3;
-}
 
-.popup input,
+
 .modal-feedback input,
 .modal-feedback textarea {
   font: inherit;
@@ -929,33 +957,28 @@ input[type="radio"].visually-hidden {
   outline: none;
 }
 
-.popup input:hover,
 .modal-feedback input:hover,
 .modal-feedback textarea:hover {
   border: 2px solid rgba(154,154,154,0.52);
 }
 
-.popup input:focus,
 .modal-feedback input:focus,
 .modal-feedback textarea:focus {
   border: 2px solid rgba(46,136,228,0.52);
 }
 
-.popup input::-webkit-input-placeholder,
 .modal-feedback input::-webkit-input-placeholder,
 .modal-feedback textarea::-webkit-input-placeholder {
   font-weight: 400;
   color: #999999;
 }
 
-.popup input::-moz-placeholder,
 .modal-feedback input::-moz-placeholder,
 .modal-feedback textarea::-moz-placeholder {
   font-weight: 400;
   color: #999999;
 }
 
-.popup input:-ms-input-placeholder,
 .modal-feedback input:-ms-input-placeholder,
 .modal-feedback textarea:-ms-input-placeholder {
   font-weight: 400;
@@ -1041,7 +1064,6 @@ input[type="radio"].visually-hidden {
   font-size: 30px;
 }
 
-.hit-item img,
 .catalog-item img {
   border-radius: 50%;
 }
@@ -1110,7 +1132,8 @@ input[type="radio"].visually-hidden {
 
 
 
-.popup,
+.popup-login,
+.popup-cart,
 .modal
 {
   display:none
