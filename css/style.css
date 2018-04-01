@@ -377,6 +377,7 @@ input[type="radio"].visually-hidden {
 
 .slider-controls label {
   display: inline-block;
+  vertical-align: top;
   width: 21px;
   height: 21px;
   margin-right: 8px;
@@ -420,6 +421,7 @@ input[type="radio"].visually-hidden {
 
 .button {
   display: inline-block;
+  vertical-align: top;
   color: #ffffff;
   font-size: 18px;
   line-height: 24px;
@@ -567,6 +569,7 @@ input[type="radio"].visually-hidden {
 .preview .sub::before {
   content: "";
   display: inline-block;
+  vertical-align: top;
   position: absolute;
   bottom: 3px;
   left: 3px;
@@ -1521,32 +1524,3 @@ input[type="radio"].visually-hidden {
   border: 0;
   box-shadow: inset 0px 2px 1px #696868;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* размеры макета*/
-/* 27    267-26-267-13-13-267-26-267    27 */
-
-/* контейнер */
-/* 1200 c padding 27 */
-
-/* логотип */
-/* 154+24 = 178*/
-
-/* меню1 */
-/* 267-26-267-13-13-267 = 853-178 = 675 */
-
-/* меню2 */
-/* 267 */
