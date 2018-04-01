@@ -154,6 +154,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   left: -7px;
   padding-top: 10px;
+  z-index: 1;
 }
 
 .dropdown-menu {
@@ -234,6 +235,7 @@ input[type="radio"].visually-hidden {
 .user-nav-login:hover .popup-wrapper,
 .user-nav-cart:hover .popup-wrapper {
   display: block;
+
 }
 
 .user-nav-login,
@@ -263,7 +265,8 @@ input[type="radio"].visually-hidden {
 }
 
 .nav-button:hover,
-.nav-button:focus {
+.nav-button:focus,
+.is-full {
   color: #323232;
   background-color: #f7f7f3;
 }
@@ -280,7 +283,8 @@ input[type="radio"].visually-hidden {
   min-width: auto;
 }
 
-.cart::before {
+.cart::before,
+.is-full::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -293,7 +297,8 @@ input[type="radio"].visually-hidden {
 }
 
 .cart:hover::before,
-.cart:focus::before {
+.cart:focus::before,
+.is-full::before {
   background-image: url("../img/basket-red.svg");
 }
 
@@ -807,6 +812,7 @@ input[type="radio"].visually-hidden {
   top: 100%;
   right: 0;
   padding-top: 10px;
+  z-index: 1;
 }
 
 .popup {
