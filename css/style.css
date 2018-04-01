@@ -201,15 +201,10 @@ input[type="radio"].visually-hidden {
 .dropdown-header::before {
   position: absolute;
   content: "";
-  bottom: 0;
+  bottom: 0px;
   left: 10%;
   width: 80%;
   border-bottom: 2px solid rgba(0,0,0,0.2);
-}
-
-.dropdown-header {
-  position: relative;
-  font-weight: 700;
 }
 
 .dropdown-item a,
@@ -221,6 +216,12 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
   padding: 6px 20px;
   margin: 3px 0px;
+}
+
+.dropdown-header {
+  position: relative;
+  font-weight: 700;
+  padding-bottom: 12px;
 }
 
 .dropdown-item a:hover,
