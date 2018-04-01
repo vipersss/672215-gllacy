@@ -361,7 +361,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   bottom: 20px;
   left: 0;
-  z-index: 20;
+  z-index: 1;
   font-size: 0;
 }
 
@@ -491,22 +491,25 @@ input[type="radio"].visually-hidden {
   background: #503225 url("../img/chocolate.jpg") no-repeat;
 }
 
-.hit-list {
+.hit-list,
+.catalog-list  {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 36px;
 }
 
-.hit-item {
+.hit-item,
+.catalog-item {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 267px;
   margin-right: 26px;
+  margin-bottom: 40px;
 }
 
-.hit-item img {
+.hit-item img,
+.catalog-item img {
   border-radius: 50%;
 }
 
@@ -521,17 +524,20 @@ input[type="radio"].visually-hidden {
   z-index: 2;
 }
 
-.hit-item:nth-child(4n) {
+.hit-item:nth-child(4n),
+.catalog-item:nth-child(4n) {
   margin-right: 0;
 }
 
-.hit-item .preview {
+.hit-item .preview,
+.catalog-item .preview {
   position: relative;
   order: -1;
   z-index: 1;
 }
 
-.hit-item p {
+.hit-item p,
+.catalog-item p {
   position: absolute;
   font-size: 45px;
   line-height: 45px;
@@ -540,10 +546,6 @@ input[type="radio"].visually-hidden {
   bottom: 0;
   margin: 0;
   padding: 14px 0px;
-}
-
-.hit-item h3 {
-  text-align: center;
 }
 
 .preview .sub {
@@ -563,15 +565,17 @@ input[type="radio"].visually-hidden {
   background: url("../img/ruble.svg") no-repeat 0 0;
 }
 
-.hit-item h3 {
+.hit-item h3,
+.catalog-item h3 {
   font: inherit;
+  text-align: center;
   margin: 0;
   padding: 0;
   margin-top: 8px;
-  z-index: 1;
 }
 
-.hit-item-wrap {
+.hit-item-wrap,
+.catalog-item-wrap {
   display: none;
   flex-direction: column-reverse;
   align-items: center;
@@ -583,15 +587,26 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
   background-color: rgba(255,255,255,0.2);
   box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
+  z-index: 2;
 }
 
-.hit-item-wrap .button {
+.hit-item-wrap .button,
+.catalog-item-wrap .button {
   margin-bottom: 20px;
   padding: 10px 17px;
 }
 
-.hit-item:hover .hit-item-wrap {
+.hit-item:hover .hit-item-wrap,
+.catalog-item:hover .catalog-item-wrap {
   display: flex;
+}
+
+.hit-item:hover::before,
+.hit-item:hover .preview,
+.catalog-item:hover .preview,
+.hit-item:hover h3,
+.catalog-item:hover h3 {
+  z-index: 3;
 }
 
 .features {
@@ -1180,31 +1195,7 @@ input[type="radio"].visually-hidden {
 
 
 
-.catalog-item .button,
-.popup-dist .button {
-  font-size: 18px;
-  line-height: 24px;
-  border-radius: 23px;
-}
 
-.catalog-item h3 {
-  text-align: center;
-}
-
-.catalog-item p {
-  font-size: 45px;
-  line-height: 45px;
-  font-weight: 700;
-  text-shadow: 0.5px 0.866px 3px rgba(49,50,53,0.5);
-}
-
-.catalog-item .sub {
-  font-size: 30px;
-}
-
-.catalog-item img {
-  border-radius: 50%;
-}
 
 .page-title {
   font-size: 35px;
@@ -1271,25 +1262,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
-.catalog-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
-.catalog-list {
-  margin-bottom: 80px; /* После реализации карточки товара возможно нужно будет поменять*/
-}
-
-.catalog-item:nth-child(4n) {
-  margin-right: 0;
-}
-
-.catalog-item {
-  width: 267px;
-  margin-right: 26px;
-}
-
 .main-flex {
   display: flex;
   flex-direction: column;
@@ -1307,21 +1279,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   width: 860px;
-}
-
-.catalog-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 80px; /* После реализации карточки товара возможно нужно будет поменять*/
-}
-
-.catalog-item {
-  /* padding: 6px; на выделении товара */
-  margin-right: 26px;
-}
-
-.catalog-item:nth-child(4n) {
-  margin-right: 0;
 }
 
 .pagination-list {
