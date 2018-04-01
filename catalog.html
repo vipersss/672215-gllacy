@@ -113,66 +113,98 @@
         <h1 class="page-title">Сливочное мороженое</h1>
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
-          <form class="filter" oninput="costoutput.value=cost.value" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset> <!-- нужно оборачивать fieldset в div т.к. он не воспринимает flex -->
+          <form class="filter"
+          oninput="outmin.value=min-price.value; outmax.value=max-price.value"
+          method="post" action="https://echo.htmlacademy.ru">
+            <fieldset class="filter-item">
               <legend>Сортировка:</legend>
               <label class="visually-hidden" for="filter-select-sort">Сортировка</label>
-              <select id="filter-select-sort" name="sort">
+              <select class="filter-sort" id="filter-select-sort" name="sort">
                 <option value="popular" selected>По популярности</option>
                 <option value="cheap">Сначала недорогие</option>
                 <option value="expensive">Сначала дорогие</option>
                 <option value="fat">По жирности</option>
               </select>
+              <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5"><path fill="#FFF" d="M4.5 5L0 0h9z"/></svg>
             </fieldset>
-            <fieldset> <!-- двойной range через js. пока оставлю type="range" переделаю когда дойду до нужной лекции-->
-              <!-- input type=text 2 штуки для ввода данных. ползунки любые например div.-->
-              <legend>Цена: <output name="costoutput">100</output> руб.</legend>
-              <label class="visually-hidden" for="filter-input-cost">Цена</label>
-              <input id="filter-input-cost" type="range" name="cost" min="0" max="800" step="100" value="100">
+            <fieldset class="filter-item">
+              <legend>Цена: <output name="outmin">100</output> руб. - <output name="outmax">500</output> руб.</legend>
+              <div class="filter-price">
+                <input type="text" name="min-price" min="0" max="700" step="100" value="100">
+                <input type="text" name="max-price" min="100" max="800" step="100" value="500">
+                <div class="range-control">
+                  <div class="range-control-wrapper">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="range-toggle range-toggle-min"></div>
+                    <div class="range-toggle range-toggle-max"></div>
+                  </div>
+                </div>
+              </div>
             </fieldset>
-            <fieldset>
+
+            <fieldset class="filter-item">
               <legend>Жирность:</legend>
-              <ul>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-radio" type="radio" name="fat-content" value="0" id="filter-input-fat-0">
-                  <label for="filter-input-fat-0">0%</label>
+              <ul class="fat-content list-style-type">
+                <li class="fat-content-item">
+                  <label class="radio-control">
+                    <input class="visually-hidden" type="radio" name="fat-content" value="0">
+                    <span class="radio-icon"></span>0%
+                  </label>
                 </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-radio" type="radio" name="fat-content" value="10" id="filter-input-fat-10" checked>
-                  <label for="filter-input-fat-10">до 10%</label>
+                <li class="fat-content-item">
+                  <label class="radio-control">
+                    <input class="visually-hidden" type="radio" name="fat-content" value="10" checked>
+                    <span class="radio-icon"></span>до 10%
+                  </label>
                 </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-radio" type="radio" name="fat-content" value="30" id="filter-input-fat-30">
-                  <label for="filter-input-fat-30">до 30%</label>
+                <li class="fat-content-item">
+                  <label class="radio-control">
+                    <input class="visually-hidden" type="radio" name="fat-content" value="30">
+                    <span class="radio-icon"></span>до 30%
+                  </label>
                 </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-radio" type="radio" name="fat-content" value="more" id="filter-input-fat-big">
-                  <label for="filter-input-fat-big">выше 30%</label>
+                <li class="fat-content-item">
+                  <label class="radio-control">
+                    <input class="visually-hidden" type="radio" name="fat-content" value="more" disabled>
+                    <span class="radio-icon"></span>выше 30%
+                  </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter-item">
               <legend>Наполнители:</legend>
-              <ul>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-checkbox" type="checkbox" name="chocolate" id="filter-input-chocolate" checked>
-                  <label for="filter-input-chocolate">Шоколадные</label>
+              <ul class="Fillers list-style-type">
+                <li class="Fillers-item">
+                  <label class="checkbox-control">
+                    <input class="visually-hidden" type="checkbox" name="chocolate" checked>
+                    <span class="checkbox-icon"></span>Шоколадные
+                  </label>
                 </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-checkbox" type="checkbox" name="sugar" id="filter-input-sugar" checked>
-                  <label for="filter-input-sugar">Сахарные присыпки</label>
+                <li class="Fillers-item">
+                  <label class="checkbox-control">
+                    <input class="visually-hidden" type="checkbox" name="sugar">
+                    <span class="checkbox-icon"></span>Сахарные присыпки
+                  </label>
                 </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-checkbox" type="checkbox" name="fruit" id="filter-input-fruit">
-                  <label for="filter-input-fruit">Фрукты</label>
+                <li class="Fillers-item">
+                  <label class="checkbox-control">
+                    <input class="visually-hidden" type="checkbox" name="fruit">
+                    <span class="checkbox-icon"></span>Фрукты
+                  </label>
                 </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-checkbox" type="checkbox" name="syrup" id="filter-input-syrup">
-                  <label for="filter-input-syrup">Сиропы</label>
+                <li class="Fillers-item">
+                  <label class="checkbox-control">
+                    <input class="visually-hidden" type="checkbox" name="syrup">
+                    <span class="checkbox-icon"></span>Сиропы
+                  </label>
                 </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-checkbox" type="checkbox" name="jam" id="filter-input-jam">
-                  <label for="filter-input-jam">Джемы</label>
+                <li class="Fillers-item">
+                  <label class="checkbox-control">
+                    <input class="visually-hidden" type="checkbox" name="jam">
+                    <span class="checkbox-icon"></span>Джемы
+                  </label>
                 </li>
               </ul>
             </fieldset>

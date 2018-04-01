@@ -1272,15 +1272,13 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   margin: 0;
   padding: 0;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 }
 
-
-
-
-
-
-
+.filters {
+  width: 860px;
+  margin-bottom: 34px;
+}
 
 .filters,
 .filter-button {
@@ -1288,16 +1286,221 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 
-.filters legend {
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-item {
+  position: relative;
+  background-color: rgba(225,255,255,0.2);
+  border-radius: 18px;
+  border: none;
+  padding: 0;
+  margin: 28px 0px;
+  margin-bottom: 10px;
+}
+
+.filter-item legend {
+  position: absolute;
   font-size: 14px;
   line-height: 16px;
+  top: -22px;
+  padding: 0 15px;
+  margin: 0;
+}
+
+.filter-sort {
+  position: relative;
+  width: 194px;
+  height: 36px;
+  border: none;
+  border-radius: 17px;
+  color: #ffffff;
+  background: transparent;
+  margin: 0;
+  padding-left: 13px;
+  padding-right: 25px;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.filter-sort + .select-arrow {
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  top: 16px;
+  right: 10px;
+}
+
+.filter-sort:hover,
+.filter-sort:focus,
+.filter-sort option {
+  color: #323232;
+  background: #ffffff;
+}
+
+.filter-sort:hover + .select-arrow path,
+.filter-sort:focus + .select-arrow path{
+  fill: #000000;
+}
+
+.filter-price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-price input {
+  display: none;
+  margin: 0 10px;
+  padding: 0 10px;
+  width: 60px;
+  height: 18px;
+  border: none;
+  text-align: center;
+}
+
+.range-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  width: 220px;
+  height: 36px;
+}
+
+.range-control-wrapper {
+  position: relative;
+  width: 100%;
+  height: 4px;
+}
+
+.range-control .scale {
+  position: absolute;
+  height: 4px;
+  width: 177px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.range-control .bar {
+  position: absolute;
+  left: 10%;
+  width: 40%;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 22px;
+  height: 22px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 10px;
+}
+
+.range-toggle-max {
+  left: 80px;
+}
+
+.fat-content,
+.Fillers {
+  display: flex;
+  padding: 9px;
+}
+
+.radio-control,
+.checkbox-control {
+  position: relative;
+  padding-left: 37px;
+  padding-right: 12px;
+  cursor: pointer;
+}
+
+.radio-control input + .radio-icon {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 0;
+  left: 0;
+  border: 3px solid rgba(225,225,225,0.8);
+  border-radius: 18px;
+}
+
+.radio-icon::before {
+  content: '';
+  display: none;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  margin-top: -4px;
+  margin-left: -4px;
+  background-color: rgba(225,225,225,0.8);
+  border-radius: 18px;
+}
+
+.radio-control input:checked + .radio-icon::before {
+  display: block;
+}
+
+.radio-control input:disabled + .radio-icon {
+  border: 3px solid rgba(225,225,225,0.4);
+}
+
+.radio-control input:focus + .radio-icon,
+.checkbox-control input:focus + .checkbox-icon {
+  /* border-radius: 50%; */
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+/* .radio-control:hover .radio-icon { */
+  /* border: 3px solid rgb(209, 14, 14); */
+/* } */
+
+.checkbox-control input + .checkbox-icon {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 0;
+  left: 0;
+  background: url("../img/checkbox-off.svg") no-repeat 0 0;
+  opacity: 0.8;
+}
+
+.checkbox-control input:checked + .checkbox-icon {
+  width: 27px;
+  background: url("../img/checkbox-on.svg") no-repeat 0 0;
+}
+
+.checkbox-control:focus .checkbox-icon {
+  opacity: 1;
 }
 
 .filter-button {
+  height: 36px;
   color: #ffffff;
   border-radius: 18px;
   background-color: rgba(255,255,255,0);
   border: 2px solid #ffffff;
+  padding: 7px 28px;
+  margin: 28px 0px;
+  margin-bottom: 10px;
 }
 
 .filter-button:focus,
@@ -1307,7 +1510,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-.filter-button:active { /* при нажатии бордер пропадает, надо увеличить размер кнопки */
+.filter-button:active {
   background-color: #ededed;
   border: 0;
   box-shadow: inset 0px 2px 1px #696868;
@@ -1324,15 +1527,6 @@ input[type="radio"].visually-hidden {
 
 
 
-.filters {
-  margin-bottom: 34px;
-}
-
-.filter {
-  display: flex;
-  flex-wrap: wrap;
-  width: 860px;
-}
 
 
 
