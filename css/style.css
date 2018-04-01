@@ -504,7 +504,6 @@ input[type="radio"].visually-hidden {
   align-items: center;
   width: 267px;
   margin-right: 26px;
-  /* padding: 6px; на выделении товара */
 }
 
 .hit-item img {
@@ -718,7 +717,9 @@ input[type="radio"].visually-hidden {
 }
 
 .popup input,
-.form-dist input {
+.form-dist input,
+.modal-feedback input,
+.modal-feedback textarea {
   font: inherit;
   font-size: 16px;
   line-height: 24px;
@@ -736,32 +737,46 @@ input[type="radio"].visually-hidden {
   width: 312px;
 }
 
+.form-feedback input {
+  width: 268px;
+}
+
 .popup input:hover,
-.form-dist input:hover {
+.form-dist input:hover,
+.modal-feedback input:hover,
+.modal-feedback textarea:hover {
   border: 2px solid rgba(154,154,154,0.52);
   padding: 8px 14px;
 }
 
 .popup input:focus,
-.form-dist input:focus {
+.form-dist input:focus,
+.modal-feedback input:focus,
+.modal-feedback textarea:focus {
   border: 2px solid rgba(46,136,228,0.52);
   padding: 8px 14px;
 }
 
 .popup input::-webkit-input-placeholder,
-.form-dist input::-webkit-input-placeholder {
+.form-dist input::-webkit-input-placeholder,
+.modal-feedback input::-webkit-input-placeholder,
+.modal-feedback textarea::-webkit-input-placeholder {
   font-weight: 400;
   color: #999999;
 }
 
 .popup input::-moz-placeholder,
-.form-dist input::-moz-placeholder {
+.form-dist input::-moz-placeholder,
+.modal-feedback input::-moz-placeholder,
+.modal-feedback textarea::-moz-placeholder {
   font-weight: 400;
   color: #999999;
 }
 
 .popup input:-ms-input-placeholder,
-.form-dist input:-ms-input-placeholder {
+.form-dist input:-ms-input-placeholder,
+.modal-feedback input:-ms-input-placeholder,
+.modal-feedback textarea:-ms-input-placeholder {
   font-weight: 400;
   color: #999999;
 }
@@ -839,6 +854,7 @@ input[type="radio"].visually-hidden {
 .products .delete {
   width: 28px;
   padding: 0px 8px;
+  cursor: pointer;
 }
 
 .products .delete::before,
@@ -928,7 +944,8 @@ input[type="radio"].visually-hidden {
 
 .contacts .button {
   width: 100%;
-  padding: 8px 23px 12px;
+  padding: 8px 23px;
+  padding-bottom: 12px;
 }
 
 .border-footer {
@@ -1038,57 +1055,90 @@ input[type="radio"].visually-hidden {
   margin-top: 2px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.modal-feedback input,
-.modal-feedback textarea {
-  font: inherit;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
+.modal {
+  position: fixed;
+  font-size: 24px;
+  line-height: 28px;
   color: #323232;
-  border-radius: 6px;
-  background-color: #ffffff;
-  border: 1px solid rgba(178,178,178,0.52);
-  outline: none;
+  background-color: #f8f6f4;
+  border-radius: 10px;
+  z-index: 5;
 }
 
-.modal-feedback input:hover,
-.modal-feedback textarea:hover {
-  border: 2px solid rgba(154,154,154,0.52);
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 4;
 }
 
-.modal-feedback input:focus,
-.modal-feedback textarea:focus {
-  border: 2px solid rgba(46,136,228,0.52);
+.modal-hidden {
+  display: none;
 }
 
-.modal-feedback input::-webkit-input-placeholder,
-.modal-feedback textarea::-webkit-input-placeholder {
-  font-weight: 400;
-  color: #999999;
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.modal-feedback input::-moz-placeholder,
-.modal-feedback textarea::-moz-placeholder {
-  font-weight: 400;
-  color: #999999;
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 2px;
+  width: 22px;
+  height: 2px;
+  background-color: #231F20;
 }
 
-.modal-feedback input:-ms-input-placeholder,
-.modal-feedback textarea:-ms-input-placeholder {
-  font-weight: 400;
-  color: #999999;
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-feedback {
+  top: 20%;
+  left: 50%;
+  width: 480px;
+  margin-left: -240px;
+  padding: 15px 25px;
+  padding-bottom: 28px;
+}
+
+.form-feedback {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-text textarea {
+  display: block;
+  width: 100%;
+  min-height: 156px;
+}
+
+.modal-feedback p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.form-feedback .button {
+  align-self: flex-end;
+  padding: 10px 17px;
 }
 
 .link-black {
@@ -1110,7 +1160,10 @@ input[type="radio"].visually-hidden {
 
 .link-white:hover,
 .link-white:focus,
-.link-white:active {
+.link-white:active,
+.footer-academy:hover .link-white,
+.footer-academy:focus .link-white,
+.footer-academy:active .link-white {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(249,172,159,0.3);
 }
@@ -1124,9 +1177,11 @@ input[type="radio"].visually-hidden {
 
 
 
+
+
+
 .catalog-item .button,
-.popup-dist .button,
-.modal-feedback .button {
+.popup-dist .button {
   font-size: 18px;
   line-height: 24px;
   border-radius: 23px;
@@ -1149,15 +1204,6 @@ input[type="radio"].visually-hidden {
 
 .catalog-item img {
   border-radius: 50%;
-}
-
-.modal {
-  font-size: 24px;
-  line-height: 28px;
-  color: #323232;
-  background-color: #f8f6f4;
-  border-radius: 10px;
-  /* background-color: rgba(255,255,255,0.3); цвет заливки всего сайта при открытом модальном окне*/
 }
 
 .page-title {
@@ -1215,10 +1261,6 @@ input[type="radio"].visually-hidden {
 
 
 
-.modal
-{
-  display:none
-}
 
 .breadcrumbs {
   display: flex;
