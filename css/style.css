@@ -644,7 +644,7 @@ input[type="radio"].visually-hidden {
 
 .hit-item h3,
 .catalog-item h3 {
-  min-width: 100%; /* fix ie11 */
+  width: 100%; /* fix ie11 */
   font: inherit;
   text-align: center;
   margin: 0;
