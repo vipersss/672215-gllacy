@@ -505,7 +505,7 @@ input[type="radio"].visually-hidden {
   align-items: center;
   width: 267px;
   margin-right: 26px;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .hit-item img,
@@ -1183,6 +1183,59 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid rgba(249,172,159,0.3);
 }
 
+.pagination-list {
+  display: flex;
+  justify-content: flex-end;
+  line-height: 18px;
+  text-align: right;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+.pagination-item,
+.pagination-arrow {
+  display: block;
+  padding: 4px;
+  margin-left: 3px;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+}
+
+.pagination-arrow {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pagination-arrow.left{
+  background-image: url("../img/icon-right-small.svg");
+  transform: scale(-1, 1);
+}
+
+.pagination-arrow.right {
+  background-image: url("../img/icon-right-small.svg");
+}
+
+.pagination-arrow.inactive {
+  opacity: 0.2;
+}
+
+.pagination-item:hover,
+.pagination-item:focus,
+.pagination-item:active,
+.pagination-arrow:focus  {
+  background-color: rgba(225,225,225,0.2);
+  border-radius: 13px;
+}
+
+.pagination-item.active {
+  background-color: #ffffff;
+  border-radius: 13px;
+}
+
+.pagination-item.active {
+  color: #353535;
+}
 
 
 
@@ -1240,12 +1293,6 @@ input[type="radio"].visually-hidden {
   box-shadow: inset 0px 2px 1px #696868;
 }
 
-.pagination-list {
-  line-height: 18px;
-  text-align: right;
-}
-
-
 
 
 
@@ -1279,12 +1326,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   width: 860px;
-}
-
-.pagination-list {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 30px;
 }
 
 
