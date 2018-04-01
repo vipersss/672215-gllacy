@@ -204,7 +204,7 @@ input[type="radio"].visually-hidden {
   bottom: 0px;
   left: 10%;
   width: 80%;
-  border-bottom: 2px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .dropdown-item a,
