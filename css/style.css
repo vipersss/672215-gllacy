@@ -84,8 +84,10 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header {
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 25px;
 }
 
 .header-row {
@@ -313,6 +315,9 @@ input[type="radio"].visually-hidden {
 }
 
 .main-contacts {
+  position: absolute;
+  right: 27px;
+  top: 72px;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
@@ -334,7 +339,7 @@ input[type="radio"].visually-hidden {
 
 .slider {
   position: relative;
-  margin-top: 276px;
+  margin-top: 320px;
   text-align: center;
   margin-bottom: 42px;
 }
