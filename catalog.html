@@ -67,29 +67,31 @@
                 </section>
               </div>
             </li>
-            <li>
-              <button class="nav-button cart" aria-label="Корзина">2 товара</button> <!-- из лекции по доступности тут должна быть кнопка. т.к. тут только попап. -->
-              <section class="popup popup-cart">
-                <h2 class="visually-hidden">Корзина</h2>
-                <table class="products">
-                  <tr class="product-item">
-                    <td class="close">x</td>
-                    <td class="thumb"><img src="img/ice-cream-1.jpg" width="33" height="33" alt="Мороженое"></td>
-                    <td class="name">Пломбир с апельсиновым джемом</td>
-                    <td class="calc">1,5 кг х <span class="opacity">200 руб.</span></td>
-                    <td class="price">300 руб.</td>
-                  </tr>
-                  <tr class="product-item">
-                    <td class="close">x</td>
-                    <td class="thumb"><img src="img/ice-cream-3.jpg" width="33" height="33" alt="Мороженое"></td>
-                    <td class="name">Клубничный пломбир с присыпкой  из белого шоколада</td>
-                    <td class="calc">1,5 кг х <span class="opacity">300 руб.</span></td>
-                    <td class="price">450 руб.</td>
-                  </tr>
-                </table>
-                <p class="total-cost">Итого: 750 руб.</p>
-                <a class="button" href="#">Оформить заказ</a>
-              </section>
+            <li class="user-nav-cart">
+              <button class="nav-button cart" aria-label="Корзина">2 товара</button>
+              <div class="popup-wrapper">
+                <section class="popup popup-cart">
+                  <h2 class="visually-hidden">Корзина</h2>
+                  <table class="products">
+                    <tr class="product-item">
+                      <td class="delete"></td>
+                      <td class="thumb"><img src="img/ice-cream-1.jpg" width="33" height="33" alt="Мороженое"></td>
+                      <td class="name">Пломбир с апельсиновым джемом</td>
+                      <td class="calc">1,5 кг х <span class="opacity">200 руб.</span></td>
+                      <td class="price">300 руб.</td>
+                    </tr>
+                    <tr class="product-item">
+                      <td class="delete"></td>
+                      <td class="thumb"><img src="img/ice-cream-3.jpg" width="33" height="33" alt="Мороженое"></td>
+                      <td class="name">Клубничный пломбир с присыпкой  из белого шоколада</td>
+                      <td class="calc">1,5 кг х <span class="opacity">300 руб.</span></td>
+                      <td class="price">450 руб.</td>
+                    </tr>
+                  </table>
+                  <p class="total-cost">Итого: 750 руб.</p>
+                  <a class="button" href="#">Оформить заказ</a>
+                </section>
+              </div>
             </li>
           </ul>
         </div>

@@ -229,11 +229,13 @@ input[type="radio"].visually-hidden {
 }
 
 .main-search:hover .popup-wrapper,
-.user-nav-login:hover .popup-wrapper {
+.user-nav-login:hover .popup-wrapper,
+.user-nav-cart:hover .popup-wrapper {
   display: block;
 }
 
-.user-nav-login {
+.user-nav-login,
+.user-nav-cart {
   position: relative;
 }
 
@@ -619,7 +621,6 @@ input[type="radio"].visually-hidden {
 .features-item {
   width: 540px;
   font-weight: 400;
-
   position: relative;
   padding: 11px 0px;
   padding-left: 58px;
@@ -805,6 +806,79 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-weight: 400;
   width: 120px;
+}
+
+.popup-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.popup-cart .opacity {
+  color: #999999;
+}
+
+.popup-cart .total-cost {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  margin: 15px 0px;
+  padding: 0;
+}
+
+.products {
+  width: 540px;
+  border-spacing: 2px 10px;
+  border-bottom: 1px solid #c9c9c7;
+}
+
+.products .delete {
+  width: 28px;
+  padding: 0px 8px;
+}
+
+.products .delete::before,
+.products .delete::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 1px;
+  background-color: #231F20;
+}
+
+.products .delete::before {
+  transform: rotate(45deg);
+}
+
+.products .delete::after {
+  transform: rotate(-45deg);
+}
+
+.products .thumb {
+  width: 50px;
+  text-align: center;
+}
+
+.products img {
+  border-radius: 50%;
+}
+
+.products .name {
+  padding: 0px 15px;
+}
+
+.products .calc {
+  width: 130px;
+  text-align: center;
+}
+
+.products .price {
+  width: 70px;
+  text-align: center;
 }
 
 .map {
@@ -1017,23 +1091,6 @@ input[type="radio"].visually-hidden {
   color: #999999;
 }
 
-.popup-cart {
-  font-size: 13px;
-  line-height: 16px;
-  font-weight: 400;
-  color: #323232;
-}
-
-.popup-cart .opacity {
-  color: #999999;
-}
-
-.popup-cart .total-cost {
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 700;
-}
-
 .link-black {
   color: #323232;
   border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -1067,7 +1124,6 @@ input[type="radio"].visually-hidden {
 
 
 
-.popup-cart .button,
 .catalog-item .button,
 .popup-dist .button,
 .modal-feedback .button {
@@ -1159,7 +1215,6 @@ input[type="radio"].visually-hidden {
 
 
 
-.popup-cart,
 .modal
 {
   display:none
