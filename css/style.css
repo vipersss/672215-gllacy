@@ -198,12 +198,17 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
-.dropdown-divider {
-  border: 1px solid rgba(0,0,0,0.2);
-  margin: 2px 12px;
+.dropdown-header::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
 }
 
 .dropdown-header {
+  position: relative;
   font-weight: 700;
 }
 
