@@ -904,7 +904,7 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-wrapper {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 100%;
   right: 0;
@@ -934,6 +934,7 @@ input[type="radio"].visually-hidden {
 .popup-login p {
   padding: 0;
   margin: 0;
+  width: 100%;
   margin-bottom: 19px;
 }
 
