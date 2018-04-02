@@ -601,7 +601,7 @@ input[type="radio"].visually-hidden {
   width: 61px;
   height: 61px;
   background: url("../img/hit.svg") no-repeat 0 0;
-  z-index: 2;
+  z-index: 4;
 }
 
 .hit-item:nth-child(4n),
@@ -693,7 +693,6 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
-.hit-item:hover::before,
 .hit-item:hover .preview,
 .catalog-item:hover .preview,
 .hit-item:hover h3,
