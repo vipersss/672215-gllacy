@@ -802,6 +802,18 @@ input[type="radio"].visually-hidden {
   padding: 6px;
   border-radius: 15px;
   background-image:
+  -webkit-repeating-linear-gradient(315deg,
+    #92cdff 0px, #92cdff 5px,
+    #f8f7f4 5px, #f8f7f4 10px,
+    #fe9e90 10px, #fe9e90 15px,
+    #f8f7f4 15px, #f8f7f4 20px);
+  background-image:
+  -o-repeating-linear-gradient(315deg,
+    #92cdff 0px, #92cdff 5px,
+    #f8f7f4 5px, #f8f7f4 10px,
+    #fe9e90 10px, #fe9e90 15px,
+    #f8f7f4 15px, #f8f7f4 20px);
+  background-image:
   repeating-linear-gradient(135deg,
     #92cdff 0px, #92cdff 5px,
     #f8f7f4 5px, #f8f7f4 10px,
@@ -1049,7 +1061,9 @@ input[type="radio"].visually-hidden {
 .map img {
   position: absolute;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
   height: 100%;
 }
 
