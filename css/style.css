@@ -42,6 +42,7 @@ input[type="radio"].visually-hidden {
 
 .list-style-type {
   list-style: none;
+	list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7); /* support: IE10, see #8844 */
   margin: 0;
   padding: 0;
 }
@@ -254,7 +255,8 @@ input[type="radio"].visually-hidden {
   margin-top: 5px;
 }
 
-.search {
+.nav-button.search {
+  font-size: 0;
   width: 32px;
   height: 32px;
   background-image: url("../img/loupe-white.svg");
@@ -799,7 +801,13 @@ input[type="radio"].visually-hidden {
 .distribution { /*нужно нарисовать градиентом*/
   padding: 6px;
   border-radius: 15px;
-  background: url("../img/bg-post.svg") no-repeat;
+  background-image:
+  repeating-linear-gradient(135deg,
+    #92cdff 0px, #92cdff 5px,
+    #f8f7f4 5px, #f8f7f4 10px,
+    #fe9e90 10px, #fe9e90 15px,
+    #f8f7f4 15px, #f8f7f4 20px);
+  /* background: url("../img/bg-post.svg") no-repeat; */
 }
 
 .distribution .background {
@@ -847,6 +855,7 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   color: #323232;
   height: 44px;
+  width: 100%; /* fix ie11 */
   border-radius: 6px;
   background-color: #ffffff;
   border: 1px solid rgba(178,178,178,0.52);
@@ -903,7 +912,7 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-wrapper {
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 100%;
   right: 0;
@@ -1033,7 +1042,21 @@ input[type="radio"].visually-hidden {
 }
 
 .map {
-  background: transparent url("../img/map-pin.jpg") no-repeat center center;
+  position: relative;
+  /* background: transparent url("../img/map-pin.jpg") no-repeat center center; */
+}
+
+.map img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  height: 100%;
+}
+
+.map iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .map .container {
@@ -1084,7 +1107,7 @@ input[type="radio"].visually-hidden {
 
 .contacts .button {
   width: 100%;
-  padding: 8px 23px;
+  padding: 8px 20px;
   padding-bottom: 12px;
 }
 
@@ -1133,47 +1156,20 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
+.social-button svg {
+  opacity: 0.8;
+}
+
 .social-button:hover,
 .social-button:focus,
 .social-button:active {
   border: 3px solid rgba(225,225,225,0.7);
 }
 
-.social-button::after {
-  content: "";
-  width: 32px;
-  height: 32px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 0.8;
-}
-
-.social-button:hover::after,
-.social-button:focus::after {
+.social-button:hover svg,
+.social-button:focus svg
+.social-button:active svg {
   opacity: 1;
-}
-
-.social-button:active::after {
-  border-radius: 50%;
-  opacity: 1;
-  -webkit-box-shadow: inset 0px 2px 1px #888888;
-          box-shadow: inset 0px 2px 1px #888888;
-}
-
-.twitter::after {
-  background-image: url("../img/twitter.svg");
-}
-
-.instagram::after {
-  background-image: url("../img/instagram.svg");
-}
-
-.facebook::after {
-  background-image: url("../img/fb.svg");
-}
-
-.vk::after {
-  background-image: url("../img/vk.svg");
 }
 
 .footer-nav-row {
@@ -1295,6 +1291,7 @@ input[type="radio"].visually-hidden {
   display: block;
   width: 100%;
   min-height: 156px;
+  resize: none;
 }
 
 .modal-feedback p {
@@ -1456,6 +1453,10 @@ input[type="radio"].visually-hidden {
       flex-wrap: wrap;
 }
 
+.filter select::-ms-expand {
+  display: none;
+}
+
 .filter-item {
   position: relative;
   background-color: rgba(225,255,255,0.2);
@@ -1504,7 +1505,6 @@ input[type="radio"].visually-hidden {
 .filter-sort:focus,
 .filter-sort option {
   color: #323232;
-  background: #ffffff;
 }
 
 .filter-sort:hover + .select-arrow path,
@@ -1693,6 +1693,7 @@ input[type="radio"].visually-hidden {
 .filter-button:active {
   background-color: #ededed;
   border: 0;
+  padding: 9px 30px;
   -webkit-box-shadow: inset 0px 2px 1px #696868;
           box-shadow: inset 0px 2px 1px #696868;
 }
